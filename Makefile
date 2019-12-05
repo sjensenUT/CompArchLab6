@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS = -Wall -Wextra -g -std=c99
 
-simulate.exe : lc3bsim4.c
+simulate.exe : lc3bsim6.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 .PHONY: clean
