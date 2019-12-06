@@ -1,0 +1,4 @@
+go
+rd
+m 0x3FFC 0x4008
+q

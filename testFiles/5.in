@@ -1,0 +1,4 @@
+go
+rd
+mdump 0x3000 0x3020
+q

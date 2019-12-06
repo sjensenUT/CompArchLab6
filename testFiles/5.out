@@ -1,0 +1,565 @@
+Output for test 5: jsr
+Assembly:
+
+.orig x3000
+jsr jumphere
+add r1 r1 #-1
+jumphere add r2 r2 #-1
+halt
+zero .fill x0
+one .fill x1
+negone .fill x-1
+maxbyte .fill x007F
+minbyte .fill x00FF
+maxword .fill x7FFF
+minword .fill xFFFF
+rand .fill xAA55
+.end
+
+
+START SIMULATOR OUTPUT
+
+LC-3b Simulator
+
+Loading Control Store from file: ucode3
+
+Read 12 words from program into memory.
+
+LC-3b-SIM> 
+Simulating...
+
+in microsequencer
+CYCLE_COUNT = 0
+state number = 18
+current pc = 0x3000
+IRD = 0
+j = 33
+in cycle_memory
+in drive_bus
+putting current pc on bus
+current pc = 0x3000
+putting busval into MAR
+loading new pc
+old PC = 0x3000, new PC = 0x3002
+
+in microsequencer
+CYCLE_COUNT = 1
+state number = 33
+current pc = 0x3002
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 1
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3000
+mdr = 0x4801
+
+in microsequencer
+CYCLE_COUNT = 2
+state number = 33
+current pc = 0x3002
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 2
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3000
+mdr = 0x4801
+
+in microsequencer
+CYCLE_COUNT = 3
+state number = 33
+current pc = 0x3002
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 3
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3000
+mdr = 0x4801
+
+in microsequencer
+CYCLE_COUNT = 4
+state number = 33
+current pc = 0x3002
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 4
+Latching ready bit
+incrmenting mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3000
+mdr = 0x4801
+
+in microsequencer
+CYCLE_COUNT = 5
+state number = 33
+current pc = 0x3002
+IRD = 0
+READY = 1, incrementing j by 2
+j = 35
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 5
+in drive_bus
+performing word read into mdr
+mar = 0x3000
+mdr = 0x4801
+
+in microsequencer
+CYCLE_COUNT = 6
+state number = 35
+current pc = 0x3002
+IRD = 0
+j = 32
+in cycle_memory
+in drive_bus
+putting MDR onto bus
+busVal = 0X4801
+
+in microsequencer
+CYCLE_COUNT = 7
+state number = 32
+current pc = 0x3002
+IRD = 1
+CURRENT_LATCHES.IR = 0x4801
+opcode = 4
+in cycle_memory
+in drive_bus
+
+in microsequencer
+CYCLE_COUNT = 8
+state number = 4
+current pc = 0x3002
+IRD = 0
+ir11 = 1, incrementing j by 1
+j = 21
+in cycle_memory
+in drive_bus
+
+in microsequencer
+CYCLE_COUNT = 9
+state number = 21
+current pc = 0x3002
+IRD = 0
+j = 18
+in cycle_memory
+in drive_bus
+putting current pc on bus
+current pc = 0x3002
+loading BUS = 0x3002, into REGS[7]
+loading new pc
+old PC = 0x3002, new PC = 0x3004
+
+in microsequencer
+CYCLE_COUNT = 10
+state number = 18
+current pc = 0x3004
+IRD = 0
+j = 33
+in cycle_memory
+in drive_bus
+putting current pc on bus
+current pc = 0x3004
+putting busval into MAR
+loading new pc
+old PC = 0x3004, new PC = 0x3006
+
+in microsequencer
+CYCLE_COUNT = 11
+state number = 33
+current pc = 0x3006
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 1
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3004
+mdr = 0x14bf
+
+in microsequencer
+CYCLE_COUNT = 12
+state number = 33
+current pc = 0x3006
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 2
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3004
+mdr = 0x14bf
+
+in microsequencer
+CYCLE_COUNT = 13
+state number = 33
+current pc = 0x3006
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 3
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3004
+mdr = 0x14bf
+
+in microsequencer
+CYCLE_COUNT = 14
+state number = 33
+current pc = 0x3006
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 4
+Latching ready bit
+incrmenting mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3004
+mdr = 0x14bf
+
+in microsequencer
+CYCLE_COUNT = 15
+state number = 33
+current pc = 0x3006
+IRD = 0
+READY = 1, incrementing j by 2
+j = 35
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 5
+in drive_bus
+performing word read into mdr
+mar = 0x3004
+mdr = 0x14bf
+
+in microsequencer
+CYCLE_COUNT = 16
+state number = 35
+current pc = 0x3006
+IRD = 0
+j = 32
+in cycle_memory
+in drive_bus
+putting MDR onto bus
+busVal = 0X14bf
+
+in microsequencer
+CYCLE_COUNT = 17
+state number = 32
+current pc = 0x3006
+IRD = 1
+CURRENT_LATCHES.IR = 0x14bf
+opcode = 1
+in cycle_memory
+in drive_bus
+
+in microsequencer
+CYCLE_COUNT = 18
+state number = 1
+current pc = 0x3006
+IRD = 0
+j = 18
+in cycle_memory
+in drive_bus
+putting ALU val on BUS
+busVal = 0Xffff
+loading BUS = 0xffff, into REGS[2]
+
+in microsequencer
+CYCLE_COUNT = 19
+state number = 18
+current pc = 0x3006
+IRD = 0
+j = 33
+in cycle_memory
+in drive_bus
+putting current pc on bus
+current pc = 0x3006
+putting busval into MAR
+loading new pc
+old PC = 0x3006, new PC = 0x3008
+
+in microsequencer
+CYCLE_COUNT = 20
+state number = 33
+current pc = 0x3008
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 1
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3006
+mdr = 0xf025
+
+in microsequencer
+CYCLE_COUNT = 21
+state number = 33
+current pc = 0x3008
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 2
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3006
+mdr = 0xf025
+
+in microsequencer
+CYCLE_COUNT = 22
+state number = 33
+current pc = 0x3008
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 3
+incrementing mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3006
+mdr = 0xf025
+
+in microsequencer
+CYCLE_COUNT = 23
+state number = 33
+current pc = 0x3008
+IRD = 0
+j = 33
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 4
+Latching ready bit
+incrmenting mem_counter
+in drive_bus
+performing word read into mdr
+mar = 0x3006
+mdr = 0xf025
+
+in microsequencer
+CYCLE_COUNT = 24
+state number = 33
+current pc = 0x3008
+IRD = 0
+READY = 1, incrementing j by 2
+j = 35
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 5
+in drive_bus
+performing word read into mdr
+mar = 0x3006
+mdr = 0xf025
+
+in microsequencer
+CYCLE_COUNT = 25
+state number = 35
+current pc = 0x3008
+IRD = 0
+j = 32
+in cycle_memory
+in drive_bus
+putting MDR onto bus
+busVal = 0Xf025
+
+in microsequencer
+CYCLE_COUNT = 26
+state number = 32
+current pc = 0x3008
+IRD = 1
+CURRENT_LATCHES.IR = 0xf025
+opcode = 15
+in cycle_memory
+in drive_bus
+
+in microsequencer
+CYCLE_COUNT = 27
+state number = 15
+current pc = 0x3008
+IRD = 0
+j = 28
+in cycle_memory
+in drive_bus
+marmux = 0, putting lshf(zext(IR)) on bus
+IR = 0xf025
+busVal = 0X004a
+putting busval into MAR
+
+in microsequencer
+CYCLE_COUNT = 28
+state number = 28
+current pc = 0x3008
+IRD = 0
+j = 28
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 1
+incrementing mem_counter
+in drive_bus
+putting current pc on bus
+current pc = 0x3008
+performing word read into mdr
+mar = 0x004a
+mdr = 0x0000
+loading BUS = 0x3008, into REGS[7]
+
+in microsequencer
+CYCLE_COUNT = 29
+state number = 28
+current pc = 0x3008
+IRD = 0
+j = 28
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 2
+incrementing mem_counter
+in drive_bus
+putting current pc on bus
+current pc = 0x3008
+performing word read into mdr
+mar = 0x004a
+mdr = 0x0000
+loading BUS = 0x3008, into REGS[7]
+
+in microsequencer
+CYCLE_COUNT = 30
+state number = 28
+current pc = 0x3008
+IRD = 0
+j = 28
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 3
+incrementing mem_counter
+in drive_bus
+putting current pc on bus
+current pc = 0x3008
+performing word read into mdr
+mar = 0x004a
+mdr = 0x0000
+loading BUS = 0x3008, into REGS[7]
+
+in microsequencer
+CYCLE_COUNT = 31
+state number = 28
+current pc = 0x3008
+IRD = 0
+j = 28
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 4
+Latching ready bit
+incrmenting mem_counter
+in drive_bus
+putting current pc on bus
+current pc = 0x3008
+performing word read into mdr
+mar = 0x004a
+mdr = 0x0000
+loading BUS = 0x3008, into REGS[7]
+
+in microsequencer
+CYCLE_COUNT = 32
+state number = 28
+current pc = 0x3008
+IRD = 0
+READY = 1, incrementing j by 2
+j = 30
+in cycle_memory
+Memory I/O Enabled
+mem_counter = 5
+in drive_bus
+putting current pc on bus
+current pc = 0x3008
+performing word read into mdr
+mar = 0x004a
+mdr = 0x0000
+loading BUS = 0x3008, into REGS[7]
+
+in microsequencer
+CYCLE_COUNT = 33
+state number = 30
+current pc = 0x3008
+IRD = 0
+j = 18
+in cycle_memory
+in drive_bus
+putting MDR onto bus
+busVal = 0X0000
+loading new pc
+old PC = 0x3008, new PC = 0x0000
+
+Simulator halted
+
+LC-3b-SIM> 
+
+Current register/bus values :
+-------------------------------------
+Cycle Count  : 34
+PC           : 0x0000
+IR           : 0xf025
+STATE_NUMBER : 0x0012
+
+BUS          : 0x0000
+MDR          : 0x0000
+MAR          : 0x004a
+CCs: N = 1  Z = 0  P = 0
+Registers:
+0: 0x0000
+1: 0x0000
+2: 0xffff
+3: 0x0000
+4: 0x0000
+5: 0x0000
+6: 0x0000
+7: 0x3008
+
+LC-3b-SIM> 
+
+Memory content [0x3000..0x3020] :
+-------------------------------------
+  0x3000 (12288) : 0x4801
+  0x3002 (12290) : 0x127f
+  0x3004 (12292) : 0x14bf
+  0x3006 (12294) : 0xf025
+  0x3008 (12296) : 0x0000
+  0x300a (12298) : 0x0001
+  0x300c (12300) : 0xffff
+  0x300e (12302) : 0x007f
+  0x3010 (12304) : 0x00ff
+  0x3012 (12306) : 0x7fff
+  0x3014 (12308) : 0xffff
+  0x3016 (12310) : 0xaa55
+  0x3018 (12312) : 0x0000
+  0x301a (12314) : 0x0000
+  0x301c (12316) : 0x0000
+  0x301e (12318) : 0x0000
+  0x3020 (12320) : 0x0000
+
+LC-3b-SIM> 
+Bye.

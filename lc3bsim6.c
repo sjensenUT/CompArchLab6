@@ -892,15 +892,12 @@ int bit(int num, int bitNum){
 
 int bits(int num, unsigned hi, unsigned lo) {
     unsigned i, mask = 1;
-    if (hi < 15 && lo < 15 && hi > lo) {
-        for (i = lo; i < hi; i++) {
-            mask = mask << 1;
-            mask++;
-        }
-        mask = mask << lo;
-        return (num & mask) >> lo;
+    for (i = lo; i < hi; i++) {
+        mask = mask << 1;
+        mask++;
     }
-    return 0;
+    mask = mask << lo;
+    return (num & mask) >> lo;
 }
 
 
@@ -1050,12 +1047,14 @@ int eval_alu_result_mux(){
 }
 
 
-int eval_br_logic(int v, int cc, int nzp, int br_op, int uncon_op, int trap_op){
+int eval_br_logic(int v, int cc, int nzp, int br_op, int uncon_op, int trap_op){	
 	if(v){
 		if(uncon_op){
+			printf("!!!!!!!!!!uncon branch is going to be taken!!!!!!!!!!\n");
 			return 1;
 		}
 		if(trap_op){
+			printf("!!!!!!!!!!trap is going to be taken!!!!!!!!!!\n");
 			return 2;
 		}
 		if(br_op){
@@ -1065,11 +1064,12 @@ int eval_br_logic(int v, int cc, int nzp, int br_op, int uncon_op, int trap_op){
 			int cc_n = bit(cc, 2);
 			int cc_z = bit(cc, 1);
 			int cc_p = bit(cc, 0);
+			printf("cc = %d, nzp = %d\n", cc, nzp);
 			if((n && cc_n) || (z && cc_z) || (p && cc_p)){
+				printf("!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!\n");
 				return 1;
 			}
-		}
-	
+		}	
 	}
 	return 0;
 }
@@ -1087,7 +1087,8 @@ int sr_reg_data,
 
 /************************* SR_stage() *************************/
 void SR_stage() {
-  
+  printf("CYCLE_COUNT = %d\n", CYCLE_COUNT); 
+  printf("in SR_stage\n"); 
   /* You are given the code for SR_stage to get you started. Look at
      the figure for SR stage to see how this code is implemented. */
   
@@ -1125,7 +1126,7 @@ int target_pc, trap_pc, mem_stall, mem_pcmux,
 
 /************************* MEM_stage() *************************/
 void MEM_stage() {
-
+	printf("in MEM_stage\n");
 	int ii,jj = 0;
   
 	NEW_PS.SR_ADDRESS = PS.MEM_ADDRESS;
@@ -1155,14 +1156,13 @@ void MEM_stage() {
 	int v_dcache_en = Get_DCACHE_EN(PS.MEM_CS) && PS.MEM_V; 
 	int r = 0, dcache_out = 0;
 	if(v_dcache_en){
-		dcache_access(PS.MEM_ADDRESS, &dcache_out, write_word, &r, we0, we1);
-	}
-	
-	if(!data_size){
-		if(mem_addr0){
-			dcache_out = sext(dcache_out >> 8, 8);
-		}else{
-			dcache_out = sext((dcache_out & 0x000000FF), 8);
+		dcache_access(PS.MEM_ADDRESS, &dcache_out, write_word, &r, we0, we1);	
+		if(!data_size){
+			if(mem_addr0){
+				dcache_out = sext(((dcache_out >> 8) & 0x000000FF), 8);
+			}else{
+				dcache_out = sext((dcache_out & 0x000000FF), 8);
+			}
 		}
 	}
 
@@ -1182,20 +1182,17 @@ void MEM_stage() {
 
 	trap_pc = dcache_out;
 	target_pc = PS.MEM_ADDRESS;
-	mem_pcmux = eval_br_logic(PS.MEM_V, PS.MEM_CC, bits(PS.MEM_IR, 2, 0), 
+	mem_pcmux = eval_br_logic(PS.MEM_V, PS.MEM_CC, bits(PS.MEM_IR, 11, 9), 
 			Get_BR_OP(PS.MEM_CS), Get_UNCOND_OP(PS.MEM_CS), Get_TRAP_OP(PS.MEM_CS));
-	v_mem_ld_cc = PS.AGEX_V && Get_MEM_LD_CC(PS.MEM_CS);
-	v_mem_ld_reg = PS.AGEX_V && Get_MEM_LD_REG(PS.MEM_CS);
-	v_mem_br_stall = PS.AGEX_V && Get_MEM_BR_STALL(PS.MEM_CS);
-
-
-
+	v_mem_ld_cc = PS.MEM_V && Get_MEM_LD_CC(PS.MEM_CS);
+	v_mem_ld_reg = PS.MEM_V && Get_MEM_LD_REG(PS.MEM_CS);
+	v_mem_br_stall = PS.MEM_V && Get_MEM_BR_STALL(PS.MEM_CS);
 }
 
 int v_agex_ld_cc, v_agex_ld_reg;
 /************************* AGEX_stage() *************************/
 void AGEX_stage() {
-
+	printf("in AGEX_stage\n");
 	int ii, jj = 0;
 	int LD_MEM = !mem_stall;
 	if (LD_MEM) {
@@ -1224,17 +1221,22 @@ void AGEX_stage() {
 int v_de_br_stall;
 /************************* DE_stage() *************************/
 void DE_stage() {
-
+	printf("in DE_stage\n");
 	int CONTROL_STORE_ADDRESS;  /* You need to implement the logic to
 			       		set the value of this variable. Look
 			         	at the figure for DE stage */
+	printf("PS.DE_IR = 0x%04x\n", PS.DE_IR);
        	CONTROL_STORE_ADDRESS = bits(PS.DE_IR, 15, 11) << 1;
+	printf("PS.DE_IR(15:11) = %d\n", bits(PS.DE_IR, 15, 11));
 	CONTROL_STORE_ADDRESS += bit(PS.DE_IR, 5);
+	printf("CONTROL_STORE_ADDRESS = %d\n", CONTROL_STORE_ADDRESS);
 	int *csinst = CONTROL_STORE[CONTROL_STORE_ADDRESS];
 	
 	v_de_br_stall = (PS.DE_V && Get_DE_BR_STALL(csinst));
+	printf("de_br_stall = %d\n", Get_DE_BR_STALL(csinst));
+	printf("v_de_br_stall = %d\n", v_de_br_stall);
 
-	int sr1 = bits(PS.DE_IR,8,6);
+	int sr1 = bits(PS.DE_IR, 8, 6);
 	int sr2_idmux = eval_sr2_idmux(PS.DE_IR);
 	int sr2;
 	if(sr2_idmux){
@@ -1254,17 +1256,20 @@ void DE_stage() {
 			v_sr_ld_reg, PS.AGEX_DRID, PS.MEM_DRID, PS.SR_DRID);
 	
 	if (LD_AGEX) {
+		printf("Loading AGEX\n");
   		NEW_PS.AGEX_NPC = PS.DE_NPC;
 		NEW_PS.AGEX_IR = PS.DE_IR;
 		NEW_PS.AGEX_SR1 = REGS[sr1];
+		printf("loaded value 0x%04x from REGS[%d] into NEW_PS.AGEX_SR1\n", REGS[sr1], sr1);
 		NEW_PS.AGEX_SR2 = REGS[sr2];
+		printf("loaded value 0x%04x from REGS[%d] into NEW_PS.AGEX_SR2\n", REGS[sr2], sr2);
 		NEW_PS.AGEX_CC = (N << 2) + (Z << 1) + P;
 		if(Get_DRMUX(csinst)){
 			NEW_PS.AGEX_DRID = 7;
 		}else{
 			NEW_PS.AGEX_DRID = bits(PS.DE_IR, 11, 9);
 		}
-		NEW_PS.AGEX_V = !(dep_stall);
+		NEW_PS.AGEX_V = PS.DE_V && !(dep_stall);
 
   		/* The code below propagates the control signals from the CONTROL
      		STORE to the AGEX.CS latch. */
@@ -1281,6 +1286,7 @@ void DE_stage() {
 		N = sr_n;
 		Z = sr_z;
 		P = sr_p;
+		printf("loaded new condition codes, N = %d, Z = %d, P = %d\n", N, Z, P);
 	}
 }
 
@@ -1288,19 +1294,26 @@ void DE_stage() {
 
 /************************* FETCH_stage() *************************/
 void FETCH_stage() {
-
+	printf("in FETCH_stage\n");
 	/* your code for FETCH stage goes here */	
 	int ir;
 	icache_access(PC, &ir, &icache_r);
 
 	int ld_de = !(dep_stall || mem_stall);
 	if(ld_de){
+		printf("loading de\n");
 		NEW_PS.DE_NPC = PC + 2;
+		printf("NEW_PS.DE_NPC = 0x%04x\n", NEW_PS.DE_NPC);
 		NEW_PS.DE_V = (icache_r && !(v_de_br_stall) && (!v_agex_br_stall) && (!v_mem_br_stall));
-		NEW_PS.DE_IR = ir;	
+		printf("NEW_PS.DE_V = %d\n", NEW_PS.DE_V);
+		NEW_PS.DE_IR = ir;
+		printf("NEW_PS.DE_IR = 0x%04x\n", NEW_PS.DE_IR);
 	}
-
-	if((icache_r && !(v_de_br_stall || v_agex_br_stall || dep_stall || mem_stall)) || v_mem_br_stall){
+	if(v_mem_br_stall){
+		printf("v_mem_br_stall = %d, mem_pcmux = %d\n", v_mem_br_stall, mem_pcmux);
+	}
+	if((icache_r && !(v_de_br_stall || v_agex_br_stall || dep_stall || mem_stall || v_mem_br_stall)) || (v_mem_br_stall && (mem_pcmux > 0))){
+		printf("loading new pc\n");
 		if(mem_pcmux == 0){
 			PC = PC + 2;
 		}else if(mem_pcmux == 1){
@@ -1309,6 +1322,7 @@ void FETCH_stage() {
 			PC = trap_pc;
 		}
 	}
+	printf("\n");
 
 }  
 
