@@ -97,4902 +97,3596 @@ START SIMULATOR OUTPUT
 
 LC-3b Simulator
 
-Loading Control Store from file: ucode3
+Loading Control Store from file: ucode
 
 Read 59 words from program into memory.
 
 LC-3b-SIM> 
 Simulating...
 
-in microsequencer
 CYCLE_COUNT = 0
-state number = 18
-current pc = 0x3000
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3000
-putting busval into MAR
-loading new pc
-old PC = 0x3000, new PC = 0x3002
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3002
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 1
-state number = 33
-current pc = 0x3002
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3000
-mdr = 0xee37
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3002
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee37
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 2
-state number = 33
-current pc = 0x3002
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3000
-mdr = 0xee37
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee37
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3004
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 3
-state number = 33
-current pc = 0x3002
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3000
-mdr = 0xee37
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee37
+bit5 = 1, bit4 = 1, imm4 = 0x0007
+PS.AGEX_SR1 = 0x0000
+performing right shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 4
-state number = 33
-current pc = 0x3002
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3000
-mdr = 0xee37
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 5
-state number = 33
-current pc = 0x3002
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3000
-mdr = 0xee37
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3070 into REGS[7]
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 6
-state number = 35
-current pc = 0x3002
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xee37
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3006
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x020d
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 7
-state number = 32
-current pc = 0x3002
-IRD = 1
-CURRENT_LATCHES.IR = 0xee37
-opcode = 14
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x020d
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 5
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[5] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 8
-state number = 14
-current pc = 0x3002
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-busVal = 0X3070
-loading BUS = 0x3070, into REGS[7]
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x020d
+bit5 = 0, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x020d
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 5
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[5] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 9
-state number = 18
-current pc = 0x3002
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3002
-putting busval into MAR
-loading new pc
-old PC = 0x3002, new PC = 0x3004
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x020d
+bit5 = 0, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x020d
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 5
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[5] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[0]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 10
-state number = 33
-current pc = 0x3004
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3002
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x020d
+bit5 = 0, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x020d
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 5
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[5] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3008
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x080c
 
-in microsequencer
 CYCLE_COUNT = 11
-state number = 33
-current pc = 0x3004
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3002
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x020d
+bit5 = 0, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x080c
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 4
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[4] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3008
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x080c
 
-in microsequencer
 CYCLE_COUNT = 12
-state number = 33
-current pc = 0x3004
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3002
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+cc = 2, nzp = 1
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x080c
+bit5 = 0, bit4 = 0, imm4 = 0x000c
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x080c
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 4
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[4] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3008
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x080c
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 13
-state number = 33
-current pc = 0x3004
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3002
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x080c
+bit5 = 0, bit4 = 0, imm4 = 0x000c
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x080c
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 4
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[4] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3008
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 14
-state number = 33
-current pc = 0x3004
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3002
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x080c
+bit5 = 0, bit4 = 0, imm4 = 0x000c
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3008
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x080c
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 15
-state number = 35
-current pc = 0x3004
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x080c
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 4
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[4] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300a
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0a0b
 
-in microsequencer
 CYCLE_COUNT = 16
-state number = 32
-current pc = 0x3004
-IRD = 1
-CURRENT_LATCHES.IR = 0x61c0
-opcode = 6
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x080c
+bit5 = 0, bit4 = 0, imm4 = 0x000c
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0a0b
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300a
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0a0b
 
-in microsequencer
 CYCLE_COUNT = 17
-state number = 6
-current pc = 0x3004
-IRD = 0
-j = 25
-in cycle_memory
-in drive_bus
-busVal = 0X3070
-putting busval into MAR
+in SR_stage
+in MEM_stage
+cc = 2, nzp = 4
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0a0b
+bit5 = 0, bit4 = 0, imm4 = 0x000b
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0a0b
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300a
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0a0b
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 18
-state number = 25
-current pc = 0x3004
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0a0b
+bit5 = 0, bit4 = 0, imm4 = 0x000b
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0a0b
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0a0b
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 19
-state number = 25
-current pc = 0x3004
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0a0b
+bit5 = 0, bit4 = 0, imm4 = 0x000b
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0a0b
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xee33
 
-in microsequencer
 CYCLE_COUNT = 20
-state number = 25
-current pc = 0x3004
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0a0b
+bit5 = 0, bit4 = 0, imm4 = 0x000b
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee33
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xee33
 
-in microsequencer
 CYCLE_COUNT = 21
-state number = 25
-current pc = 0x3004
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
+in SR_stage
+in MEM_stage
+cc = 2, nzp = 5
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee33
+bit5 = 1, bit4 = 1, imm4 = 0x0003
+PS.AGEX_SR1 = 0x0000
+performing right shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee33
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xee33
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 22
-state number = 25
-current pc = 0x3004
-IRD = 0
-READY = 1, incrementing j by 2
-j = 27
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee33
+bit5 = 1, bit4 = 1, imm4 = 0x0003
+PS.AGEX_SR1 = 0x0000
+performing right shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee33
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee33
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 23
-state number = 27
-current pc = 0x3004
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0000
-loading BUS = 0x0000, into REGS[0]
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee33
+bit5 = 1, bit4 = 1, imm4 = 0x0003
+PS.AGEX_SR1 = 0x0000
+performing right shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee33
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 24
-state number = 18
-current pc = 0x3004
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3004
-putting busval into MAR
-loading new pc
-old PC = 0x3004, new PC = 0x3006
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee33
+bit5 = 1, bit4 = 1, imm4 = 0x0003
+PS.AGEX_SR1 = 0x0000
+performing right shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 25
-state number = 33
-current pc = 0x3006
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3004
-mdr = 0x020d
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 26
-state number = 33
-current pc = 0x3006
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3004
-mdr = 0x020d
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3072 into REGS[7]
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 27
-state number = 33
-current pc = 0x3006
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3004
-mdr = 0x020d
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3010
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0208
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 28
-state number = 33
-current pc = 0x3006
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3004
-mdr = 0x020d
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3072
+performing left shift
+result = 0x3072
+in DE_stage
+PS.DE_IR = 0x0208
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 29
-state number = 33
-current pc = 0x3006
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3004
-mdr = 0x020d
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0208
+bit5 = 0, bit4 = 0, imm4 = 0x0008
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0208
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 30
-state number = 35
-current pc = 0x3006
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X020d
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0208
+bit5 = 0, bit4 = 0, imm4 = 0x0008
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0208
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0xffff into REGS[0]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 31
-state number = 32
-current pc = 0x3006
-IRD = 1
-CURRENT_LATCHES.IR = 0x020d
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0208
+bit5 = 0, bit4 = 0, imm4 = 0x0008
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0208
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3012
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0407
 
-in microsequencer
 CYCLE_COUNT = 32
-state number = 0
-current pc = 0x3006
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0208
+bit5 = 0, bit4 = 0, imm4 = 0x0008
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xff00
+in DE_stage
+PS.DE_IR = 0x0407
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3012
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0407
 
-in microsequencer
 CYCLE_COUNT = 33
-state number = 18
-current pc = 0x3006
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3006
-putting busval into MAR
-loading new pc
-old PC = 0x3006, new PC = 0x3008
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 1
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0407
+bit5 = 0, bit4 = 0, imm4 = 0x0007
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xff80
+in DE_stage
+PS.DE_IR = 0x0407
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3012
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0407
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 34
-state number = 33
-current pc = 0x3008
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3006
-mdr = 0x080c
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0407
+bit5 = 0, bit4 = 0, imm4 = 0x0007
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xff80
+in DE_stage
+PS.DE_IR = 0x0407
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3012
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0407
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 35
-state number = 33
-current pc = 0x3008
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3006
-mdr = 0x080c
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0407
+bit5 = 0, bit4 = 0, imm4 = 0x0007
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xff80
+in DE_stage
+PS.DE_IR = 0x0407
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3014
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0606
 
-in microsequencer
 CYCLE_COUNT = 36
-state number = 33
-current pc = 0x3008
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3006
-mdr = 0x080c
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0407
+bit5 = 0, bit4 = 0, imm4 = 0x0007
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xff80
+in DE_stage
+PS.DE_IR = 0x0606
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 6
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[6] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3014
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0606
 
-in microsequencer
 CYCLE_COUNT = 37
-state number = 33
-current pc = 0x3008
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3006
-mdr = 0x080c
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 2
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0606
+bit5 = 0, bit4 = 0, imm4 = 0x0006
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffc0
+in DE_stage
+PS.DE_IR = 0x0606
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 6
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[6] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3014
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0606
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 38
-state number = 33
-current pc = 0x3008
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3006
-mdr = 0x080c
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0606
+bit5 = 0, bit4 = 0, imm4 = 0x0006
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffc0
+in DE_stage
+PS.DE_IR = 0x0606
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 6
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[6] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3014
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0606
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 39
-state number = 35
-current pc = 0x3008
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X080c
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0606
+bit5 = 0, bit4 = 0, imm4 = 0x0006
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffc0
+in DE_stage
+PS.DE_IR = 0x0606
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 6
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[6] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3016
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 40
-state number = 32
-current pc = 0x3008
-IRD = 1
-CURRENT_LATCHES.IR = 0x080c
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0606
+bit5 = 0, bit4 = 0, imm4 = 0x0006
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffc0
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3016
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xee2f
 
-in microsequencer
 CYCLE_COUNT = 41
-state number = 0
-current pc = 0x3008
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 3
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee2f
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3016
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xee2f
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 42
-state number = 18
-current pc = 0x3008
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3008
-putting busval into MAR
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee2f
+bit5 = 1, bit4 = 0, imm4 = 0x000f
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0x8000
+in DE_stage
+PS.DE_IR = 0xee2f
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3016
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee2f
 loading new pc
-old PC = 0x3008, new PC = 0x300a
 
-in microsequencer
 CYCLE_COUNT = 43
-state number = 33
-current pc = 0x300a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3008
-mdr = 0x0a0b
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee2f
+bit5 = 1, bit4 = 0, imm4 = 0x000f
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0x8000
+in DE_stage
+PS.DE_IR = 0xee2f
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3018
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 44
-state number = 33
-current pc = 0x300a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3008
-mdr = 0x0a0b
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee2f
+bit5 = 1, bit4 = 0, imm4 = 0x000f
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0x8000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 45
-state number = 33
-current pc = 0x300a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3008
-mdr = 0x0a0b
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3072
+performing left shift
+result = 0x3072
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 46
-state number = 33
-current pc = 0x300a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3008
-mdr = 0x0a0b
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3072
+performing left shift
+result = 0x3072
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3074 into REGS[7]
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 47
-state number = 33
-current pc = 0x300a
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3008
-mdr = 0x0a0b
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3072
+performing left shift
+result = 0x3072
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0803
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 48
-state number = 35
-current pc = 0x300a
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0a0b
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x0803
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 49
-state number = 32
-current pc = 0x300a
-IRD = 1
-CURRENT_LATCHES.IR = 0x0a0b
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0803
+bit5 = 0, bit4 = 0, imm4 = 0x0003
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfff8
+in DE_stage
+PS.DE_IR = 0x0803
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 50
-state number = 0
-current pc = 0x300a
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0803
+bit5 = 0, bit4 = 0, imm4 = 0x0003
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfff8
+in DE_stage
+PS.DE_IR = 0x0803
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+Loading value 0x0001 into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 51
-state number = 18
-current pc = 0x300a
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x300a
-putting busval into MAR
-loading new pc
-old PC = 0x300a, new PC = 0x300c
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0803
+bit5 = 0, bit4 = 0, imm4 = 0x0003
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfff8
+in DE_stage
+PS.DE_IR = 0x0803
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 3
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0402
 
-in microsequencer
 CYCLE_COUNT = 52
-state number = 33
-current pc = 0x300c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300a
-mdr = 0xee33
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0803
+bit5 = 0, bit4 = 0, imm4 = 0x0003
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0008
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 53
-state number = 33
-current pc = 0x300c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300a
-mdr = 0xee33
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 4
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0402
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 54
-state number = 33
-current pc = 0x300c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300a
-mdr = 0xee33
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0402
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 55
-state number = 33
-current pc = 0x300c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300a
-mdr = 0xee33
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0c01
 
-in microsequencer
 CYCLE_COUNT = 56
-state number = 33
-current pc = 0x300c
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x300a
-mdr = 0xee33
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0c01
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0c01
 
-in microsequencer
 CYCLE_COUNT = 57
-state number = 35
-current pc = 0x300c
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xee33
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 2
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0c01
+bit5 = 0, bit4 = 0, imm4 = 0x0001
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0002
+in DE_stage
+PS.DE_IR = 0x0c01
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0c01
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 58
-state number = 32
-current pc = 0x300c
-IRD = 1
-CURRENT_LATCHES.IR = 0xee33
-opcode = 14
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0c01
+bit5 = 0, bit4 = 0, imm4 = 0x0001
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0002
+in DE_stage
+PS.DE_IR = 0x0c01
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0c01
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 59
-state number = 14
-current pc = 0x300c
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-busVal = 0X3072
-loading BUS = 0x3072, into REGS[7]
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0c01
+bit5 = 0, bit4 = 0, imm4 = 0x0001
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0002
+in DE_stage
+PS.DE_IR = 0x0c01
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3020
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0e02
 
-in microsequencer
 CYCLE_COUNT = 60
-state number = 18
-current pc = 0x300c
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x300c
-putting busval into MAR
-loading new pc
-old PC = 0x300c, new PC = 0x300e
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0c01
+bit5 = 0, bit4 = 0, imm4 = 0x0001
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0002
+in DE_stage
+PS.DE_IR = 0x0e02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3020
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0e02
 
-in microsequencer
 CYCLE_COUNT = 61
-state number = 33
-current pc = 0x300e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300c
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 6
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0e02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0e02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3020
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0e02
+v_mem_br_stall = 1, mem_pcmux = 0
 
-in microsequencer
 CYCLE_COUNT = 62
-state number = 33
-current pc = 0x300e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300c
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0e02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0e02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3020
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0e02
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 63
-state number = 33
-current pc = 0x300e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300c
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0e02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0e02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3022
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 64
-state number = 33
-current pc = 0x300e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300c
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0e02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3022
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 65
-state number = 33
-current pc = 0x300e
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x300c
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 7
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3022
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 66
-state number = 35
-current pc = 0x300e
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3026
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee25
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 67
-state number = 32
-current pc = 0x300e
-IRD = 1
-CURRENT_LATCHES.IR = 0x61c0
-opcode = 6
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee25
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3028
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 68
-state number = 6
-current pc = 0x300e
-IRD = 0
-j = 25
-in cycle_memory
-in drive_bus
-busVal = 0X3072
-putting busval into MAR
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee25
+bit5 = 1, bit4 = 0, imm4 = 0x0005
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0020
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 69
-state number = 25
-current pc = 0x300e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 70
-state number = 25
-current pc = 0x300e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3070 into REGS[7]
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 71
-state number = 25
-current pc = 0x300e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0402
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 72
-state number = 25
-current pc = 0x300e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 73
-state number = 25
-current pc = 0x300e
-IRD = 0
-READY = 1, incrementing j by 2
-j = 27
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 74
-state number = 27
-current pc = 0x300e
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xffff
-loading BUS = 0xffff, into REGS[0]
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[0]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 75
-state number = 18
-current pc = 0x300e
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x300e
-putting busval into MAR
-loading new pc
-old PC = 0x300e, new PC = 0x3010
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0402
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 76
-state number = 33
-current pc = 0x3010
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300e
-mdr = 0x0208
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0402
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 77
-state number = 33
-current pc = 0x3010
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300e
-mdr = 0x0208
+in SR_stage
+in MEM_stage
+cc = 2, nzp = 2
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302c
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 78
-state number = 33
-current pc = 0x3010
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300e
-mdr = 0x0208
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3030
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 79
-state number = 33
-current pc = 0x3010
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x300e
-mdr = 0x0208
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3030
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0c02
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 80
-state number = 33
-current pc = 0x3010
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x300e
-mdr = 0x0208
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0c02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3032
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 81
-state number = 35
-current pc = 0x3010
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0208
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0c02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3032
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 82
-state number = 32
-current pc = 0x3010
-IRD = 1
-CURRENT_LATCHES.IR = 0x0208
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+cc = 2, nzp = 6
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3032
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 83
-state number = 0
-current pc = 0x3010
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3036
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0602
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 84
-state number = 18
-current pc = 0x3010
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3010
-putting busval into MAR
-loading new pc
-old PC = 0x3010, new PC = 0x3012
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x0602
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3038
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 85
-state number = 33
-current pc = 0x3012
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3010
-mdr = 0x0407
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0602
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3038
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 86
-state number = 33
-current pc = 0x3012
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3010
-mdr = 0x0407
+in SR_stage
+in MEM_stage
+cc = 2, nzp = 3
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3038
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 87
-state number = 33
-current pc = 0x3012
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3010
-mdr = 0x0407
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x303c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee1c
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 88
-state number = 33
-current pc = 0x3012
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3010
-mdr = 0x0407
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xee1c
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x303e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 89
-state number = 33
-current pc = 0x3012
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3010
-mdr = 0x0407
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee1c
+bit5 = 0, bit4 = 1, imm4 = 0x000c
+PS.AGEX_SR1 = 0x0000
+performing right shift
+zeroing out high bits
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 90
-state number = 35
-current pc = 0x3012
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0407
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 91
-state number = 32
-current pc = 0x3012
-IRD = 1
-CURRENT_LATCHES.IR = 0x0407
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3070 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3074 into REGS[7]
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 92
-state number = 0
-current pc = 0x3012
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3070
+performing left shift
+result = 0x3070
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3040
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0202
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 93
-state number = 18
-current pc = 0x3012
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3012
-putting busval into MAR
-loading new pc
-old PC = 0x3012, new PC = 0x3014
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x0202
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 94
-state number = 33
-current pc = 0x3014
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3012
-mdr = 0x0606
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0202
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0202
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 95
-state number = 33
-current pc = 0x3014
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3012
-mdr = 0x0606
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0202
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0202
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+Loading value 0x0001 into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 96
-state number = 33
-current pc = 0x3014
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3012
-mdr = 0x0606
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0202
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0202
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3042
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 97
-state number = 33
-current pc = 0x3014
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3012
-mdr = 0x0606
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0202
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3042
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 98
-state number = 33
-current pc = 0x3014
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3012
-mdr = 0x0606
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 1
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3042
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 99
-state number = 35
-current pc = 0x3014
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0606
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3046
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0602
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 100
-state number = 32
-current pc = 0x3014
-IRD = 1
-CURRENT_LATCHES.IR = 0x0606
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x0602
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3048
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 101
-state number = 0
-current pc = 0x3014
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0602
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3048
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 102
-state number = 18
-current pc = 0x3014
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3014
-putting busval into MAR
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 3
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3048
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
 loading new pc
-old PC = 0x3014, new PC = 0x3016
 
-in microsequencer
 CYCLE_COUNT = 103
-state number = 33
-current pc = 0x3016
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3014
-mdr = 0xee2f
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x304c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0a02
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 104
-state number = 33
-current pc = 0x3016
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3014
-mdr = 0xee2f
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x0a02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x304e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 105
-state number = 33
-current pc = 0x3016
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3014
-mdr = 0xee2f
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0a02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x304e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 106
-state number = 33
-current pc = 0x3016
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3014
-mdr = 0xee2f
+in SR_stage
+in MEM_stage
+cc = 1, nzp = 5
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x304e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 107
-state number = 33
-current pc = 0x3016
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3014
-mdr = 0xee2f
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3052
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee10
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 108
-state number = 35
-current pc = 0x3016
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xee2f
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xee10
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3054
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 109
-state number = 32
-current pc = 0x3016
-IRD = 1
-CURRENT_LATCHES.IR = 0xee2f
-opcode = 14
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee10
+bit5 = 0, bit4 = 1, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0001
+performing right shift
+zeroing out high bits
+result = 0x0001
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 110
-state number = 14
-current pc = 0x3016
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-busVal = 0X3074
-loading BUS = 0x3074, into REGS[7]
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 111
-state number = 18
-current pc = 0x3016
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3016
-putting busval into MAR
-loading new pc
-old PC = 0x3016, new PC = 0x3018
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3074 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3072 into REGS[7]
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 112
-state number = 33
-current pc = 0x3018
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3016
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3074
+performing left shift
+result = 0x3074
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3056
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0802
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 113
-state number = 33
-current pc = 0x3018
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3016
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3072
+performing left shift
+result = 0x3072
+in DE_stage
+PS.DE_IR = 0x0802
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 114
-state number = 33
-current pc = 0x3018
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3016
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0802
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0802
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 115
-state number = 33
-current pc = 0x3018
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3016
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0802
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0802
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+Loading value 0xffff into REGS[0]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
 
-in microsequencer
 CYCLE_COUNT = 116
-state number = 33
-current pc = 0x3018
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3016
-mdr = 0x61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0802
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0004
+in DE_stage
+PS.DE_IR = 0x0802
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3058
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 117
-state number = 35
-current pc = 0x3018
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X61c0
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0802
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfffc
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3058
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
 
-in microsequencer
 CYCLE_COUNT = 118
-state number = 32
-current pc = 0x3018
-IRD = 1
-CURRENT_LATCHES.IR = 0x61c0
-opcode = 6
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 4
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3058
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 119
-state number = 6
-current pc = 0x3018
-IRD = 0
-j = 25
-in cycle_memory
-in drive_bus
-busVal = 0X3074
-putting busval into MAR
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x305c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0c02
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 120
-state number = 25
-current pc = 0x3018
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x0c02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x305e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 121
-state number = 25
-current pc = 0x3018
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0c02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfffc
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x305e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 122
-state number = 25
-current pc = 0x3018
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 6
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x305e
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 123
-state number = 25
-current pc = 0x3018
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3062
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0a02
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 124
-state number = 25
-current pc = 0x3018
-IRD = 0
-READY = 1, incrementing j by 2
-j = 27
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x0a02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3064
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 125
-state number = 27
-current pc = 0x3018
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0001
-loading BUS = 0x0001, into REGS[0]
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0a02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfffc
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3064
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 126
-state number = 18
-current pc = 0x3018
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3018
-putting busval into MAR
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 5
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3064
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
+v_mem_br_stall = 1, mem_pcmux = 1
 loading new pc
-old PC = 0x3018, new PC = 0x301a
 
-in microsequencer
 CYCLE_COUNT = 127
-state number = 33
-current pc = 0x301a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3018
-mdr = 0x0803
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3068
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0e02
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 128
-state number = 33
-current pc = 0x301a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3018
-mdr = 0x0803
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x0e02
+PS.DE_IR(15:11) = 1
+CONTROL_STORE_ADDRESS = 2
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 2
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x306a
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 129
-state number = 33
-current pc = 0x301a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3018
-mdr = 0x0803
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0e02
+bit5 = 0, bit4 = 0, imm4 = 0x0002
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xfffc
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x306a
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x1261
 
-in microsequencer
 CYCLE_COUNT = 130
-state number = 33
-current pc = 0x301a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3018
-mdr = 0x0803
+in SR_stage
+in MEM_stage
+cc = 4, nzp = 7
+!!!!!!!!!!conditional branch is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1261
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x306a
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
+v_mem_br_stall = 1, mem_pcmux = 1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 131
-state number = 33
-current pc = 0x301a
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3018
-mdr = 0x0803
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3072 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x306e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x14a1
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 132
-state number = 35
-current pc = 0x301a
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0803
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x14a1
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 2, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[2] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3070
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xf025
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 133
-state number = 32
-current pc = 0x301a
-IRD = 1
-CURRENT_LATCHES.IR = 0x0803
-opcode = 0
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0xf025
+PS.DE_IR(15:11) = 30
+CONTROL_STORE_ADDRESS = 61
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3072
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0000
 
-in microsequencer
 CYCLE_COUNT = 134
-state number = 0
-current pc = 0x301a
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xf025
+bit5 = 1, bit4 = 0, imm4 = 0x0005
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffe0
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3072
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0000
 
-in microsequencer
 CYCLE_COUNT = 135
-state number = 18
-current pc = 0x301a
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x301a
-putting busval into MAR
+in SR_stage
+in MEM_stage
+!!!!!!!!!!trap is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading value 0x0001 into REGS[2]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+v_mem_br_stall = 1, mem_pcmux = 2
 loading new pc
-old PC = 0x301a, new PC = 0x301c
 
-in microsequencer
 CYCLE_COUNT = 136
-state number = 33
-current pc = 0x301c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301a
-mdr = 0x0402
+in SR_stage
+in MEM_stage
+!!!!!!!!!!trap is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffff
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0xfeef
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0000
+v_mem_br_stall = 1, mem_pcmux = 2
+loading new pc
 
-in microsequencer
 CYCLE_COUNT = 137
-state number = 33
-current pc = 0x301c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301a
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 138
-state number = 33
-current pc = 0x301c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301a
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 139
-state number = 33
-current pc = 0x301c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301a
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 140
-state number = 33
-current pc = 0x301c
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x301a
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 141
-state number = 35
-current pc = 0x301c
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0402
-
-in microsequencer
-CYCLE_COUNT = 142
-state number = 32
-current pc = 0x301c
-IRD = 1
-CURRENT_LATCHES.IR = 0x0402
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 143
-state number = 0
-current pc = 0x301c
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 144
-state number = 18
-current pc = 0x301c
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x301c
-putting busval into MAR
+in SR_stage
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0xffff
+performing left shift
+result = 0xffff
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3070 into REGS[7]
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x0002
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0000
 loading new pc
-old PC = 0x301c, new PC = 0x301e
-
-in microsequencer
-CYCLE_COUNT = 145
-state number = 33
-current pc = 0x301e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301c
-mdr = 0x0c01
-
-in microsequencer
-CYCLE_COUNT = 146
-state number = 33
-current pc = 0x301e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301c
-mdr = 0x0c01
-
-in microsequencer
-CYCLE_COUNT = 147
-state number = 33
-current pc = 0x301e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301c
-mdr = 0x0c01
-
-in microsequencer
-CYCLE_COUNT = 148
-state number = 33
-current pc = 0x301e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301c
-mdr = 0x0c01
-
-in microsequencer
-CYCLE_COUNT = 149
-state number = 33
-current pc = 0x301e
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x301c
-mdr = 0x0c01
-
-in microsequencer
-CYCLE_COUNT = 150
-state number = 35
-current pc = 0x301e
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0c01
-
-in microsequencer
-CYCLE_COUNT = 151
-state number = 32
-current pc = 0x301e
-IRD = 1
-CURRENT_LATCHES.IR = 0x0c01
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 152
-state number = 0
-current pc = 0x301e
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 153
-state number = 18
-current pc = 0x301e
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x301e
-putting busval into MAR
-loading new pc
-old PC = 0x301e, new PC = 0x3020
-
-in microsequencer
-CYCLE_COUNT = 154
-state number = 33
-current pc = 0x3020
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301e
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 155
-state number = 33
-current pc = 0x3020
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301e
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 156
-state number = 33
-current pc = 0x3020
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301e
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 157
-state number = 33
-current pc = 0x3020
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x301e
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 158
-state number = 33
-current pc = 0x3020
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x301e
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 159
-state number = 35
-current pc = 0x3020
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0e02
-
-in microsequencer
-CYCLE_COUNT = 160
-state number = 32
-current pc = 0x3020
-IRD = 1
-CURRENT_LATCHES.IR = 0x0e02
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 161
-state number = 0
-current pc = 0x3020
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 162
-state number = 22
-current pc = 0x3020
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3020, new PC = 0x3024
-
-in microsequencer
-CYCLE_COUNT = 163
-state number = 18
-current pc = 0x3024
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3024
-putting busval into MAR
-loading new pc
-old PC = 0x3024, new PC = 0x3026
-
-in microsequencer
-CYCLE_COUNT = 164
-state number = 33
-current pc = 0x3026
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3024
-mdr = 0xee25
-
-in microsequencer
-CYCLE_COUNT = 165
-state number = 33
-current pc = 0x3026
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3024
-mdr = 0xee25
-
-in microsequencer
-CYCLE_COUNT = 166
-state number = 33
-current pc = 0x3026
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3024
-mdr = 0xee25
-
-in microsequencer
-CYCLE_COUNT = 167
-state number = 33
-current pc = 0x3026
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3024
-mdr = 0xee25
-
-in microsequencer
-CYCLE_COUNT = 168
-state number = 33
-current pc = 0x3026
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3024
-mdr = 0xee25
-
-in microsequencer
-CYCLE_COUNT = 169
-state number = 35
-current pc = 0x3026
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xee25
-
-in microsequencer
-CYCLE_COUNT = 170
-state number = 32
-current pc = 0x3026
-IRD = 1
-CURRENT_LATCHES.IR = 0xee25
-opcode = 14
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 171
-state number = 14
-current pc = 0x3026
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-busVal = 0X3070
-loading BUS = 0x3070, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 172
-state number = 18
-current pc = 0x3026
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3026
-putting busval into MAR
-loading new pc
-old PC = 0x3026, new PC = 0x3028
-
-in microsequencer
-CYCLE_COUNT = 173
-state number = 33
-current pc = 0x3028
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3026
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 174
-state number = 33
-current pc = 0x3028
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3026
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 175
-state number = 33
-current pc = 0x3028
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3026
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 176
-state number = 33
-current pc = 0x3028
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3026
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 177
-state number = 33
-current pc = 0x3028
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3026
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 178
-state number = 35
-current pc = 0x3028
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X61c0
-
-in microsequencer
-CYCLE_COUNT = 179
-state number = 32
-current pc = 0x3028
-IRD = 1
-CURRENT_LATCHES.IR = 0x61c0
-opcode = 6
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 180
-state number = 6
-current pc = 0x3028
-IRD = 0
-j = 25
-in cycle_memory
-in drive_bus
-busVal = 0X3070
-putting busval into MAR
-
-in microsequencer
-CYCLE_COUNT = 181
-state number = 25
-current pc = 0x3028
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
-
-in microsequencer
-CYCLE_COUNT = 182
-state number = 25
-current pc = 0x3028
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
-
-in microsequencer
-CYCLE_COUNT = 183
-state number = 25
-current pc = 0x3028
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
-
-in microsequencer
-CYCLE_COUNT = 184
-state number = 25
-current pc = 0x3028
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
-
-in microsequencer
-CYCLE_COUNT = 185
-state number = 25
-current pc = 0x3028
-IRD = 0
-READY = 1, incrementing j by 2
-j = 27
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3070
-mdr = 0x0000
-
-in microsequencer
-CYCLE_COUNT = 186
-state number = 27
-current pc = 0x3028
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0000
-loading BUS = 0x0000, into REGS[0]
-
-in microsequencer
-CYCLE_COUNT = 187
-state number = 18
-current pc = 0x3028
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3028
-putting busval into MAR
-loading new pc
-old PC = 0x3028, new PC = 0x302a
-
-in microsequencer
-CYCLE_COUNT = 188
-state number = 33
-current pc = 0x302a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3028
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 189
-state number = 33
-current pc = 0x302a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3028
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 190
-state number = 33
-current pc = 0x302a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3028
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 191
-state number = 33
-current pc = 0x302a
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3028
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 192
-state number = 33
-current pc = 0x302a
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3028
-mdr = 0x0402
-
-in microsequencer
-CYCLE_COUNT = 193
-state number = 35
-current pc = 0x302a
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0402
-
-in microsequencer
-CYCLE_COUNT = 194
-state number = 32
-current pc = 0x302a
-IRD = 1
-CURRENT_LATCHES.IR = 0x0402
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 195
-state number = 0
-current pc = 0x302a
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 196
-state number = 22
-current pc = 0x302a
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x302a, new PC = 0x302e
-
-in microsequencer
-CYCLE_COUNT = 197
-state number = 18
-current pc = 0x302e
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x302e
-putting busval into MAR
-loading new pc
-old PC = 0x302e, new PC = 0x3030
-
-in microsequencer
-CYCLE_COUNT = 198
-state number = 33
-current pc = 0x3030
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x302e
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 199
-state number = 33
-current pc = 0x3030
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x302e
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 200
-state number = 33
-current pc = 0x3030
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x302e
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 201
-state number = 33
-current pc = 0x3030
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x302e
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 202
-state number = 33
-current pc = 0x3030
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x302e
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 203
-state number = 35
-current pc = 0x3030
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0c02
-
-in microsequencer
-CYCLE_COUNT = 204
-state number = 32
-current pc = 0x3030
-IRD = 1
-CURRENT_LATCHES.IR = 0x0c02
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 205
-state number = 0
-current pc = 0x3030
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 206
-state number = 22
-current pc = 0x3030
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3030, new PC = 0x3034
-
-in microsequencer
-CYCLE_COUNT = 207
-state number = 18
-current pc = 0x3034
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3034
-putting busval into MAR
-loading new pc
-old PC = 0x3034, new PC = 0x3036
-
-in microsequencer
-CYCLE_COUNT = 208
-state number = 33
-current pc = 0x3036
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3034
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 209
-state number = 33
-current pc = 0x3036
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3034
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 210
-state number = 33
-current pc = 0x3036
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3034
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 211
-state number = 33
-current pc = 0x3036
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3034
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 212
-state number = 33
-current pc = 0x3036
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3034
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 213
-state number = 35
-current pc = 0x3036
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0602
-
-in microsequencer
-CYCLE_COUNT = 214
-state number = 32
-current pc = 0x3036
-IRD = 1
-CURRENT_LATCHES.IR = 0x0602
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 215
-state number = 0
-current pc = 0x3036
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 216
-state number = 22
-current pc = 0x3036
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3036, new PC = 0x303a
-
-in microsequencer
-CYCLE_COUNT = 217
-state number = 18
-current pc = 0x303a
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x303a
-putting busval into MAR
-loading new pc
-old PC = 0x303a, new PC = 0x303c
-
-in microsequencer
-CYCLE_COUNT = 218
-state number = 33
-current pc = 0x303c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303a
-mdr = 0xee1c
-
-in microsequencer
-CYCLE_COUNT = 219
-state number = 33
-current pc = 0x303c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303a
-mdr = 0xee1c
-
-in microsequencer
-CYCLE_COUNT = 220
-state number = 33
-current pc = 0x303c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303a
-mdr = 0xee1c
-
-in microsequencer
-CYCLE_COUNT = 221
-state number = 33
-current pc = 0x303c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303a
-mdr = 0xee1c
-
-in microsequencer
-CYCLE_COUNT = 222
-state number = 33
-current pc = 0x303c
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x303a
-mdr = 0xee1c
-
-in microsequencer
-CYCLE_COUNT = 223
-state number = 35
-current pc = 0x303c
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xee1c
-
-in microsequencer
-CYCLE_COUNT = 224
-state number = 32
-current pc = 0x303c
-IRD = 1
-CURRENT_LATCHES.IR = 0xee1c
-opcode = 14
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 225
-state number = 14
-current pc = 0x303c
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-busVal = 0X3074
-loading BUS = 0x3074, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 226
-state number = 18
-current pc = 0x303c
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x303c
-putting busval into MAR
-loading new pc
-old PC = 0x303c, new PC = 0x303e
-
-in microsequencer
-CYCLE_COUNT = 227
-state number = 33
-current pc = 0x303e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303c
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 228
-state number = 33
-current pc = 0x303e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303c
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 229
-state number = 33
-current pc = 0x303e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303c
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 230
-state number = 33
-current pc = 0x303e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303c
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 231
-state number = 33
-current pc = 0x303e
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x303c
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 232
-state number = 35
-current pc = 0x303e
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X61c0
-
-in microsequencer
-CYCLE_COUNT = 233
-state number = 32
-current pc = 0x303e
-IRD = 1
-CURRENT_LATCHES.IR = 0x61c0
-opcode = 6
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 234
-state number = 6
-current pc = 0x303e
-IRD = 0
-j = 25
-in cycle_memory
-in drive_bus
-busVal = 0X3074
-putting busval into MAR
-
-in microsequencer
-CYCLE_COUNT = 235
-state number = 25
-current pc = 0x303e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
-
-in microsequencer
-CYCLE_COUNT = 236
-state number = 25
-current pc = 0x303e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
-
-in microsequencer
-CYCLE_COUNT = 237
-state number = 25
-current pc = 0x303e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
-
-in microsequencer
-CYCLE_COUNT = 238
-state number = 25
-current pc = 0x303e
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
-
-in microsequencer
-CYCLE_COUNT = 239
-state number = 25
-current pc = 0x303e
-IRD = 0
-READY = 1, incrementing j by 2
-j = 27
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3074
-mdr = 0x0001
-
-in microsequencer
-CYCLE_COUNT = 240
-state number = 27
-current pc = 0x303e
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0001
-loading BUS = 0x0001, into REGS[0]
-
-in microsequencer
-CYCLE_COUNT = 241
-state number = 18
-current pc = 0x303e
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x303e
-putting busval into MAR
-loading new pc
-old PC = 0x303e, new PC = 0x3040
-
-in microsequencer
-CYCLE_COUNT = 242
-state number = 33
-current pc = 0x3040
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303e
-mdr = 0x0202
-
-in microsequencer
-CYCLE_COUNT = 243
-state number = 33
-current pc = 0x3040
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303e
-mdr = 0x0202
-
-in microsequencer
-CYCLE_COUNT = 244
-state number = 33
-current pc = 0x3040
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303e
-mdr = 0x0202
-
-in microsequencer
-CYCLE_COUNT = 245
-state number = 33
-current pc = 0x3040
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x303e
-mdr = 0x0202
-
-in microsequencer
-CYCLE_COUNT = 246
-state number = 33
-current pc = 0x3040
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x303e
-mdr = 0x0202
-
-in microsequencer
-CYCLE_COUNT = 247
-state number = 35
-current pc = 0x3040
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0202
-
-in microsequencer
-CYCLE_COUNT = 248
-state number = 32
-current pc = 0x3040
-IRD = 1
-CURRENT_LATCHES.IR = 0x0202
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 249
-state number = 0
-current pc = 0x3040
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 250
-state number = 22
-current pc = 0x3040
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3040, new PC = 0x3044
-
-in microsequencer
-CYCLE_COUNT = 251
-state number = 18
-current pc = 0x3044
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3044
-putting busval into MAR
-loading new pc
-old PC = 0x3044, new PC = 0x3046
-
-in microsequencer
-CYCLE_COUNT = 252
-state number = 33
-current pc = 0x3046
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3044
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 253
-state number = 33
-current pc = 0x3046
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3044
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 254
-state number = 33
-current pc = 0x3046
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3044
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 255
-state number = 33
-current pc = 0x3046
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3044
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 256
-state number = 33
-current pc = 0x3046
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3044
-mdr = 0x0602
-
-in microsequencer
-CYCLE_COUNT = 257
-state number = 35
-current pc = 0x3046
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0602
-
-in microsequencer
-CYCLE_COUNT = 258
-state number = 32
-current pc = 0x3046
-IRD = 1
-CURRENT_LATCHES.IR = 0x0602
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 259
-state number = 0
-current pc = 0x3046
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 260
-state number = 22
-current pc = 0x3046
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3046, new PC = 0x304a
-
-in microsequencer
-CYCLE_COUNT = 261
-state number = 18
-current pc = 0x304a
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x304a
-putting busval into MAR
-loading new pc
-old PC = 0x304a, new PC = 0x304c
-
-in microsequencer
-CYCLE_COUNT = 262
-state number = 33
-current pc = 0x304c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x304a
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 263
-state number = 33
-current pc = 0x304c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x304a
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 264
-state number = 33
-current pc = 0x304c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x304a
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 265
-state number = 33
-current pc = 0x304c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x304a
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 266
-state number = 33
-current pc = 0x304c
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x304a
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 267
-state number = 35
-current pc = 0x304c
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0a02
-
-in microsequencer
-CYCLE_COUNT = 268
-state number = 32
-current pc = 0x304c
-IRD = 1
-CURRENT_LATCHES.IR = 0x0a02
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 269
-state number = 0
-current pc = 0x304c
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 270
-state number = 22
-current pc = 0x304c
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x304c, new PC = 0x3050
-
-in microsequencer
-CYCLE_COUNT = 271
-state number = 18
-current pc = 0x3050
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3050
-putting busval into MAR
-loading new pc
-old PC = 0x3050, new PC = 0x3052
-
-in microsequencer
-CYCLE_COUNT = 272
-state number = 33
-current pc = 0x3052
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3050
-mdr = 0xee10
-
-in microsequencer
-CYCLE_COUNT = 273
-state number = 33
-current pc = 0x3052
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3050
-mdr = 0xee10
-
-in microsequencer
-CYCLE_COUNT = 274
-state number = 33
-current pc = 0x3052
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3050
-mdr = 0xee10
-
-in microsequencer
-CYCLE_COUNT = 275
-state number = 33
-current pc = 0x3052
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3050
-mdr = 0xee10
-
-in microsequencer
-CYCLE_COUNT = 276
-state number = 33
-current pc = 0x3052
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3050
-mdr = 0xee10
-
-in microsequencer
-CYCLE_COUNT = 277
-state number = 35
-current pc = 0x3052
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xee10
-
-in microsequencer
-CYCLE_COUNT = 278
-state number = 32
-current pc = 0x3052
-IRD = 1
-CURRENT_LATCHES.IR = 0xee10
-opcode = 14
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 279
-state number = 14
-current pc = 0x3052
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-busVal = 0X3072
-loading BUS = 0x3072, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 280
-state number = 18
-current pc = 0x3052
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3052
-putting busval into MAR
-loading new pc
-old PC = 0x3052, new PC = 0x3054
-
-in microsequencer
-CYCLE_COUNT = 281
-state number = 33
-current pc = 0x3054
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3052
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 282
-state number = 33
-current pc = 0x3054
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3052
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 283
-state number = 33
-current pc = 0x3054
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3052
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 284
-state number = 33
-current pc = 0x3054
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3052
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 285
-state number = 33
-current pc = 0x3054
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3052
-mdr = 0x61c0
-
-in microsequencer
-CYCLE_COUNT = 286
-state number = 35
-current pc = 0x3054
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X61c0
-
-in microsequencer
-CYCLE_COUNT = 287
-state number = 32
-current pc = 0x3054
-IRD = 1
-CURRENT_LATCHES.IR = 0x61c0
-opcode = 6
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 288
-state number = 6
-current pc = 0x3054
-IRD = 0
-j = 25
-in cycle_memory
-in drive_bus
-busVal = 0X3072
-putting busval into MAR
-
-in microsequencer
-CYCLE_COUNT = 289
-state number = 25
-current pc = 0x3054
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
-
-in microsequencer
-CYCLE_COUNT = 290
-state number = 25
-current pc = 0x3054
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
-
-in microsequencer
-CYCLE_COUNT = 291
-state number = 25
-current pc = 0x3054
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
-
-in microsequencer
-CYCLE_COUNT = 292
-state number = 25
-current pc = 0x3054
-IRD = 0
-j = 25
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
-
-in microsequencer
-CYCLE_COUNT = 293
-state number = 25
-current pc = 0x3054
-IRD = 0
-READY = 1, incrementing j by 2
-j = 27
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3072
-mdr = 0xffff
-
-in microsequencer
-CYCLE_COUNT = 294
-state number = 27
-current pc = 0x3054
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xffff
-loading BUS = 0xffff, into REGS[0]
-
-in microsequencer
-CYCLE_COUNT = 295
-state number = 18
-current pc = 0x3054
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3054
-putting busval into MAR
-loading new pc
-old PC = 0x3054, new PC = 0x3056
-
-in microsequencer
-CYCLE_COUNT = 296
-state number = 33
-current pc = 0x3056
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3054
-mdr = 0x0802
-
-in microsequencer
-CYCLE_COUNT = 297
-state number = 33
-current pc = 0x3056
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3054
-mdr = 0x0802
-
-in microsequencer
-CYCLE_COUNT = 298
-state number = 33
-current pc = 0x3056
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3054
-mdr = 0x0802
-
-in microsequencer
-CYCLE_COUNT = 299
-state number = 33
-current pc = 0x3056
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3054
-mdr = 0x0802
-
-in microsequencer
-CYCLE_COUNT = 300
-state number = 33
-current pc = 0x3056
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3054
-mdr = 0x0802
-
-in microsequencer
-CYCLE_COUNT = 301
-state number = 35
-current pc = 0x3056
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0802
-
-in microsequencer
-CYCLE_COUNT = 302
-state number = 32
-current pc = 0x3056
-IRD = 1
-CURRENT_LATCHES.IR = 0x0802
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 303
-state number = 0
-current pc = 0x3056
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 304
-state number = 22
-current pc = 0x3056
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3056, new PC = 0x305a
-
-in microsequencer
-CYCLE_COUNT = 305
-state number = 18
-current pc = 0x305a
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x305a
-putting busval into MAR
-loading new pc
-old PC = 0x305a, new PC = 0x305c
-
-in microsequencer
-CYCLE_COUNT = 306
-state number = 33
-current pc = 0x305c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x305a
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 307
-state number = 33
-current pc = 0x305c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x305a
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 308
-state number = 33
-current pc = 0x305c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x305a
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 309
-state number = 33
-current pc = 0x305c
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x305a
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 310
-state number = 33
-current pc = 0x305c
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x305a
-mdr = 0x0c02
-
-in microsequencer
-CYCLE_COUNT = 311
-state number = 35
-current pc = 0x305c
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0c02
-
-in microsequencer
-CYCLE_COUNT = 312
-state number = 32
-current pc = 0x305c
-IRD = 1
-CURRENT_LATCHES.IR = 0x0c02
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 313
-state number = 0
-current pc = 0x305c
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 314
-state number = 22
-current pc = 0x305c
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x305c, new PC = 0x3060
-
-in microsequencer
-CYCLE_COUNT = 315
-state number = 18
-current pc = 0x3060
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3060
-putting busval into MAR
-loading new pc
-old PC = 0x3060, new PC = 0x3062
-
-in microsequencer
-CYCLE_COUNT = 316
-state number = 33
-current pc = 0x3062
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3060
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 317
-state number = 33
-current pc = 0x3062
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3060
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 318
-state number = 33
-current pc = 0x3062
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3060
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 319
-state number = 33
-current pc = 0x3062
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3060
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 320
-state number = 33
-current pc = 0x3062
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3060
-mdr = 0x0a02
-
-in microsequencer
-CYCLE_COUNT = 321
-state number = 35
-current pc = 0x3062
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0a02
-
-in microsequencer
-CYCLE_COUNT = 322
-state number = 32
-current pc = 0x3062
-IRD = 1
-CURRENT_LATCHES.IR = 0x0a02
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 323
-state number = 0
-current pc = 0x3062
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 324
-state number = 22
-current pc = 0x3062
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3062, new PC = 0x3066
-
-in microsequencer
-CYCLE_COUNT = 325
-state number = 18
-current pc = 0x3066
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x3066
-putting busval into MAR
-loading new pc
-old PC = 0x3066, new PC = 0x3068
-
-in microsequencer
-CYCLE_COUNT = 326
-state number = 33
-current pc = 0x3068
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3066
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 327
-state number = 33
-current pc = 0x3068
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3066
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 328
-state number = 33
-current pc = 0x3068
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3066
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 329
-state number = 33
-current pc = 0x3068
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x3066
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 330
-state number = 33
-current pc = 0x3068
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x3066
-mdr = 0x0e02
-
-in microsequencer
-CYCLE_COUNT = 331
-state number = 35
-current pc = 0x3068
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0e02
-
-in microsequencer
-CYCLE_COUNT = 332
-state number = 32
-current pc = 0x3068
-IRD = 1
-CURRENT_LATCHES.IR = 0x0e02
-opcode = 0
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 333
-state number = 0
-current pc = 0x3068
-IRD = 0
-BEN = 1, incrementing j by 4
-j = 22
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 334
-state number = 22
-current pc = 0x3068
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-loading new pc
-old PC = 0x3068, new PC = 0x306c
-
-in microsequencer
-CYCLE_COUNT = 335
-state number = 18
-current pc = 0x306c
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x306c
-putting busval into MAR
-loading new pc
-old PC = 0x306c, new PC = 0x306e
-
-in microsequencer
-CYCLE_COUNT = 336
-state number = 33
-current pc = 0x306e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306c
-mdr = 0x14a1
-
-in microsequencer
-CYCLE_COUNT = 337
-state number = 33
-current pc = 0x306e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306c
-mdr = 0x14a1
-
-in microsequencer
-CYCLE_COUNT = 338
-state number = 33
-current pc = 0x306e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306c
-mdr = 0x14a1
-
-in microsequencer
-CYCLE_COUNT = 339
-state number = 33
-current pc = 0x306e
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306c
-mdr = 0x14a1
-
-in microsequencer
-CYCLE_COUNT = 340
-state number = 33
-current pc = 0x306e
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x306c
-mdr = 0x14a1
-
-in microsequencer
-CYCLE_COUNT = 341
-state number = 35
-current pc = 0x306e
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X14a1
-
-in microsequencer
-CYCLE_COUNT = 342
-state number = 32
-current pc = 0x306e
-IRD = 1
-CURRENT_LATCHES.IR = 0x14a1
-opcode = 1
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 343
-state number = 1
-current pc = 0x306e
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting ALU val on BUS
-busVal = 0X0001
-loading BUS = 0x0001, into REGS[2]
-
-in microsequencer
-CYCLE_COUNT = 344
-state number = 18
-current pc = 0x306e
-IRD = 0
-j = 33
-in cycle_memory
-in drive_bus
-putting current pc on bus
-current pc = 0x306e
-putting busval into MAR
-loading new pc
-old PC = 0x306e, new PC = 0x3070
-
-in microsequencer
-CYCLE_COUNT = 345
-state number = 33
-current pc = 0x3070
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306e
-mdr = 0xf025
-
-in microsequencer
-CYCLE_COUNT = 346
-state number = 33
-current pc = 0x3070
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306e
-mdr = 0xf025
-
-in microsequencer
-CYCLE_COUNT = 347
-state number = 33
-current pc = 0x3070
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306e
-mdr = 0xf025
-
-in microsequencer
-CYCLE_COUNT = 348
-state number = 33
-current pc = 0x3070
-IRD = 0
-j = 33
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-performing word read into mdr
-mar = 0x306e
-mdr = 0xf025
-
-in microsequencer
-CYCLE_COUNT = 349
-state number = 33
-current pc = 0x3070
-IRD = 0
-READY = 1, incrementing j by 2
-j = 35
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-performing word read into mdr
-mar = 0x306e
-mdr = 0xf025
-
-in microsequencer
-CYCLE_COUNT = 350
-state number = 35
-current pc = 0x3070
-IRD = 0
-j = 32
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0Xf025
-
-in microsequencer
-CYCLE_COUNT = 351
-state number = 32
-current pc = 0x3070
-IRD = 1
-CURRENT_LATCHES.IR = 0xf025
-opcode = 15
-in cycle_memory
-in drive_bus
-
-in microsequencer
-CYCLE_COUNT = 352
-state number = 15
-current pc = 0x3070
-IRD = 0
-j = 28
-in cycle_memory
-in drive_bus
-marmux = 0, putting lshf(zext(IR)) on bus
-IR = 0xf025
-busVal = 0X004a
-putting busval into MAR
-
-in microsequencer
-CYCLE_COUNT = 353
-state number = 28
-current pc = 0x3070
-IRD = 0
-j = 28
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 1
-incrementing mem_counter
-in drive_bus
-putting current pc on bus
-current pc = 0x3070
-performing word read into mdr
-mar = 0x004a
-mdr = 0x0000
-loading BUS = 0x3070, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 354
-state number = 28
-current pc = 0x3070
-IRD = 0
-j = 28
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 2
-incrementing mem_counter
-in drive_bus
-putting current pc on bus
-current pc = 0x3070
-performing word read into mdr
-mar = 0x004a
-mdr = 0x0000
-loading BUS = 0x3070, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 355
-state number = 28
-current pc = 0x3070
-IRD = 0
-j = 28
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 3
-incrementing mem_counter
-in drive_bus
-putting current pc on bus
-current pc = 0x3070
-performing word read into mdr
-mar = 0x004a
-mdr = 0x0000
-loading BUS = 0x3070, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 356
-state number = 28
-current pc = 0x3070
-IRD = 0
-j = 28
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 4
-Latching ready bit
-incrmenting mem_counter
-in drive_bus
-putting current pc on bus
-current pc = 0x3070
-performing word read into mdr
-mar = 0x004a
-mdr = 0x0000
-loading BUS = 0x3070, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 357
-state number = 28
-current pc = 0x3070
-IRD = 0
-READY = 1, incrementing j by 2
-j = 30
-in cycle_memory
-Memory I/O Enabled
-mem_counter = 5
-in drive_bus
-putting current pc on bus
-current pc = 0x3070
-performing word read into mdr
-mar = 0x004a
-mdr = 0x0000
-loading BUS = 0x3070, into REGS[7]
-
-in microsequencer
-CYCLE_COUNT = 358
-state number = 30
-current pc = 0x3070
-IRD = 0
-j = 18
-in cycle_memory
-in drive_bus
-putting MDR onto bus
-busVal = 0X0000
-loading new pc
-old PC = 0x3070, new PC = 0x0000
 
 Simulator halted
 
 LC-3b-SIM> 
 
-Current register/bus values :
+Current architectural state :
 -------------------------------------
-Cycle Count  : 359
-PC           : 0x0000
-IR           : 0xf025
-STATE_NUMBER : 0x0012
-
-BUS          : 0x0000
-MDR          : 0x0000
-MAR          : 0x004a
+Cycle Count : 138
+PC          : 0x0002
 CCs: N = 0  Z = 0  P = 1
 Registers:
 0: 0xffff

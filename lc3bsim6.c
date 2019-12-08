@@ -912,12 +912,6 @@ int sext(int num, int length){
 }
 
 
-int eval_sr2_idmux(int IR){
-	int opcode = bits(IR, 15, 12);
-	int ir5 = bit(IR, 5);
-	return !((opcode == 1 || opcode == 5 || opcode == 9) && ir5);
-}
-
 int dependency_logic(int v, int sr1_needed, int sr2_needed, int sr1, int sr2, int de_br_op, int agex_ld_cc, 
 		int mem_ld_cc, int sr_ld_cc, int agex_ld_reg, int mem_ld_reg, int sr_ld_reg, int agex_drid, 
 		int mem_drid, int sr_drid){
@@ -1000,24 +994,34 @@ int eval_addressmux(){
 }
 
 int eval_shf(){
+	printf("-------------in eval_shf----------------\n");
 	int bit5 = bit(PS.AGEX_IR, 5);
 	int bit4 = bit(PS.AGEX_IR, 4);
 	int imm4 = bits(PS.AGEX_IR, 3, 0);
+	printf("PS.AGEX_IR = 0x%04x\n", PS.AGEX_IR);
+	printf("bit5 = %d, bit4 = %d, imm4 = 0x%04x\n", bit5, bit4, imm4);
+	printf("PS.AGEX_SR1 = 0x%04x\n", PS.AGEX_SR1);
 	int result;
 	if(bit4 == 0){
+		printf("performing left shift\n");
                 result = PS.AGEX_SR1 << imm4;
         }else{
-                result = PS.AGEX_SR1 >> imm4;
+		printf("performing right shift\n");
+                result = sext(PS.AGEX_SR1, 16) >> imm4;
                 if(bit5 == 0){
+			printf("zeroing out high bits\n");
                         int temp = 0x0000FFFF >> (imm4);
                         result = result & temp;
                 }
         }
+	result = result & 0x0000FFFF;
+	printf("result = 0x%04x\n", result);
 	return result;
 
 }
 
 int eval_alu(){
+	printf("in eval_alu\n");
 	int a = PS.AGEX_SR1;
 	int b;
 	if(Get_SR2MUX(PS.AGEX_CS)){
@@ -1025,16 +1029,16 @@ int eval_alu(){
 	}else{
 		b = PS.AGEX_SR2;
 	}
-
+	printf("a = 0x%04x, b = 0x%04x\n", a, b);
 	int aluk = Get_ALUK(PS.AGEX_CS);
 	if(aluk == 0){ // add
-		return a + b;
+		return (a + b) & 0x0000FFFF;
 	}else if(aluk == 1){ // and
-		return a & b;
+		return (a & b) & 0x0000FFFF;
 	}else if(aluk == 2){ // xor
-		return a ^ b;
+		return (a ^ b) & 0x0000FFFF;
 	}else{ // passb
-		return b;
+		return b & 0x0000FFFF;
 	}
 }
 
@@ -1165,7 +1169,7 @@ void MEM_stage() {
 			}
 		}
 	}
-
+	mem_stall = v_dcache_en && !r;
 	NEW_PS.SR_DATA = dcache_out;
 	NEW_PS.SR_NPC = PS.MEM_NPC;
 	NEW_PS.SR_ALU_RESULT = PS.MEM_ALU_RESULT;
@@ -1192,7 +1196,7 @@ void MEM_stage() {
 int v_agex_ld_cc, v_agex_ld_reg;
 /************************* AGEX_stage() *************************/
 void AGEX_stage() {
-	printf("in AGEX_stage\n");
+	printf("in AGEX_stage, Valid = %d\n", PS.AGEX_V);
 	int ii, jj = 0;
 	int LD_MEM = !mem_stall;
 	if (LD_MEM) {
@@ -1217,7 +1221,6 @@ void AGEX_stage() {
 
 }
 
-
 int v_de_br_stall;
 /************************* DE_stage() *************************/
 void DE_stage() {
@@ -1237,13 +1240,16 @@ void DE_stage() {
 	printf("v_de_br_stall = %d\n", v_de_br_stall);
 
 	int sr1 = bits(PS.DE_IR, 8, 6);
-	int sr2_idmux = eval_sr2_idmux(PS.DE_IR);
+	int sr2_idmux = bit(PS.DE_IR, 13);
 	int sr2;
 	if(sr2_idmux){
+		printf("sr2id = PS.DE_IR(11:9)\n");
 		sr2 = bits(PS.DE_IR, 11, 9);	
 	}else{
+		printf("sr2id = PS.DE_IR(2:0)\n");
 		sr2 = bits(PS.DE_IR, 2, 0);
 	}
+	printf("sr1id = %d, sr2id = %d\n", sr1, sr2);
 
 	int sr1_needed = Get_SR1_NEEDED(csinst);
 	int sr2_needed = Get_SR2_NEEDED(csinst);
@@ -1279,6 +1285,7 @@ void DE_stage() {
   	}
 
 	if(v_sr_ld_reg){
+		printf("Loading value 0x%04x into REGS[%d]\n", sr_reg_data, PS.SR_DRID);
 		REGS[PS.SR_DRID] = sr_reg_data;
 	}
 

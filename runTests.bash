@@ -21,7 +21,7 @@ function runTest {
     echo -e "Assembly:\n" >> $dir/$2.out
     cat $dir/$2.asm >> $dir/$2.out
     echo -e "\nSTART SIMULATOR OUTPUT\n" >> $dir/$2.out
-    ./simulate.exe ucode3 $dir/$2.obj < $dir/$2.in >> $dir/$2.out
+    ./simulate.exe ucode $dir/$2.obj < $dir/$2.in >> $dir/$2.out
     code=$?
     if [ $code != 0 ]; then
         echo -e "${RED}SIMULATION PROCESS FAILED${NC}"
