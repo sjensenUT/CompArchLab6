@@ -94,6 +94,2260 @@ Read 41 words from program into memory.
 LC-3b-SIM> 
 Simulating...
 
+CYCLE_COUNT = 0
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3002
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
+
+CYCLE_COUNT = 1
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3002
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee20
+loading new pc
+
+CYCLE_COUNT = 2
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0xee20
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 59
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3004
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
+
+CYCLE_COUNT = 3
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 40
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee20
+bit5 = 1, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 4
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 5
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3042 into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 6
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3006
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee1e
+loading new pc
+
+CYCLE_COUNT = 7
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0xee1e
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3008
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x63c0
+loading new pc
+
+CYCLE_COUNT = 8
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 3c
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee1e
+bit5 = 0, bit4 = 1, imm4 = 0x000e
+PS.AGEX_SR1 = 0x0000
+performing right shift
+zeroing out high bits
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 9
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x0001 into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 10
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x3042 into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 11
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1401
+loading new pc
+
+CYCLE_COUNT = 12
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x1401
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 4
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 13
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x0000
+in DE_stage
+PS.DE_IR = 0x1401
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 4
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 14
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x0000
+in DE_stage
+PS.DE_IR = 0x1401
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 4
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x0001 into REGS[1]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 15
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x0000
+in DE_stage
+PS.DE_IR = 0x1401
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 4
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x16c3
+loading new pc
+
+CYCLE_COUNT = 16
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0001, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x16c3
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 4
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 3, sr2id = 3
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x300e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee1b
+loading new pc
+
+CYCLE_COUNT = 17
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0000, b = 0x0000
+in DE_stage
+PS.DE_IR = 0xee1b
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3010
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
+
+CYCLE_COUNT = 18
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 36
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee1b
+bit5 = 0, bit4 = 1, imm4 = 0x000b
+PS.AGEX_SR1 = 0x0001
+performing right shift
+zeroing out high bits
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x0002 into REGS[2]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 19
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[3]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 20
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3044 into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 21
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3012
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee19
+loading new pc
+
+CYCLE_COUNT = 22
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0xee19
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3014
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x63c0
+loading new pc
+
+CYCLE_COUNT = 23
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 32
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee19
+bit5 = 0, bit4 = 1, imm4 = 0x0009
+PS.AGEX_SR1 = 0x0001
+performing right shift
+zeroing out high bits
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 24
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0xffff into REGS[0]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 25
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x3044 into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 26
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3016
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
+
+CYCLE_COUNT = 27
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3016
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1840
+loading new pc
+
+CYCLE_COUNT = 28
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1840
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 29
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0xffff
+in DE_stage
+PS.DE_IR = 0x1840
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0x0001 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0xffff into REGS[1]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 30
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0xffff
+in DE_stage
+PS.DE_IR = 0x1840
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3018
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee1a
+loading new pc
+
+CYCLE_COUNT = 31
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0xffff, b = 0xffff
+in DE_stage
+PS.DE_IR = 0xee1a
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
+
+CYCLE_COUNT = 32
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 34
+output = 304c
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee1a
+bit5 = 0, bit4 = 1, imm4 = 0x000a
+PS.AGEX_SR1 = 0xffff
+performing right shift
+zeroing out high bits
+result = 0x003f
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 33
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0xfffe into REGS[4]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 34
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3044 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x304c into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 35
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3044
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3044
+performing left shift
+result = 0x3044
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304c from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee17
+loading new pc
+
+CYCLE_COUNT = 36
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304c
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304c
+performing left shift
+result = 0x304c
+in DE_stage
+PS.DE_IR = 0xee17
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0xffff from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x304c from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x301e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x63c0
+loading new pc
+
+CYCLE_COUNT = 37
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 2e
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee17
+bit5 = 0, bit4 = 1, imm4 = 0x0007
+PS.AGEX_SR1 = 0xffff
+performing right shift
+zeroing out high bits
+result = 0x01ff
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x304c from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 38
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304c
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304c
+performing left shift
+result = 0x304c
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x304c from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x8000 into REGS[0]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 39
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304c
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304c
+performing left shift
+result = 0x304c
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x304c from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x304a into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 40
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304c
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304c
+performing left shift
+result = 0x304c
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3020
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1a01
+loading new pc
+
+CYCLE_COUNT = 41
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x1a01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 42
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x8000, b = 0xffff
+in DE_stage
+PS.DE_IR = 0x1a01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 43
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x8000, b = 0xffff
+in DE_stage
+PS.DE_IR = 0x1a01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0xffff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x7fff into REGS[1]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 44
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x8000, b = 0xffff
+in DE_stage
+PS.DE_IR = 0x1a01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3022
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee10
+loading new pc
+
+CYCLE_COUNT = 45
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x8000, b = 0x7fff
+in DE_stage
+PS.DE_IR = 0xee10
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3024
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
+
+CYCLE_COUNT = 46
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 20
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee10
+bit5 = 0, bit4 = 1, imm4 = 0x0000
+PS.AGEX_SR1 = 0x8000
+performing right shift
+zeroing out high bits
+result = 0x8000
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 47
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0xffff into REGS[5]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 48
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3042 into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 49
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3026
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee12
+loading new pc
+
+CYCLE_COUNT = 50
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0xee12
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x8000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3028
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x63c0
+loading new pc
+
+CYCLE_COUNT = 51
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 24
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee12
+bit5 = 0, bit4 = 1, imm4 = 0x0002
+PS.AGEX_SR1 = 0x8000
+performing right shift
+zeroing out high bits
+result = 0x2000
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 52
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x0001 into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 53
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3042 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x304a into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 54
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3042
+performing left shift
+result = 0x3042
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1c01
+loading new pc
+
+CYCLE_COUNT = 55
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x1c01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 56
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x7fff
+in DE_stage
+PS.DE_IR = 0x1c01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 57
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x7fff
+in DE_stage
+PS.DE_IR = 0x1c01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x7fff into REGS[1]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 58
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x7fff
+in DE_stage
+PS.DE_IR = 0x1c01
+PS.DE_IR(15:11) = 3
+CONTROL_STORE_ADDRESS = 6
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xee0a
+loading new pc
+
+CYCLE_COUNT = 59
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0001, b = 0x7fff
+in DE_stage
+PS.DE_IR = 0xee0a
+PS.DE_IR(15:11) = 29
+CONTROL_STORE_ADDRESS = 58
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x302e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x61c0
+loading new pc
+
+CYCLE_COUNT = 60
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 14
+output = 3040
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xee0a
+bit5 = 0, bit4 = 0, imm4 = 0x000a
+PS.AGEX_SR1 = 0x0001
+performing left shift
+result = 0x0400
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 61
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x8000 into REGS[6]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 62
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x304a from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3040 into REGS[7]
+in FETCH_stage
+
+CYCLE_COUNT = 63
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 304a
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x304a
+performing left shift
+result = 0x304a
+in DE_stage
+PS.DE_IR = 0x61c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 0
+Loading AGEX
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3030
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x63c0
+loading new pc
+
+CYCLE_COUNT = 64
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3040
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x61c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3040
+performing left shift
+result = 0x3040
+in DE_stage
+PS.DE_IR = 0x63c0
+PS.DE_IR(15:11) = 12
+CONTROL_STORE_ADDRESS = 24
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 7, sr2id = 1
+Loading AGEX
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3032
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x10be
+loading new pc
+
+CYCLE_COUNT = 65
+in MEM_stage
+in AGEX_stage, Valid = 1
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3040
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x63c0
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x3040
+performing left shift
+result = 0x3040
+in DE_stage
+PS.DE_IR = 0x10be
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 2, sr2id = 6
+Loading AGEX
+loaded value 0x0002 from REGS[2] into NEW_PS.AGEX_SR1
+loaded value 0x8000 from REGS[6] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3034
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0xfeed
+
+CYCLE_COUNT = 66
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0002, b = 0xfffffffe
+in DE_stage
+PS.DE_IR = 0xfeed
+PS.DE_IR(15:11) = 31
+CONTROL_STORE_ADDRESS = 63
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(11:9)
+sr1id = 3, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[3] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[0]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3034
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1021
+loading new pc
+
+CYCLE_COUNT = 67
+in MEM_stage
+in AGEX_stage, Valid = 0
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xfeed
+bit5 = 1, bit4 = 0, imm4 = 0x000d
+PS.AGEX_SR1 = 0x0000
+performing left shift
+result = 0x0000
+in DE_stage
+PS.DE_IR = 0x1021
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x7fff from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[1]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 68
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1021
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[0]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 69
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x1021
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 1
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3036
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x103f
+loading new pc
+
+CYCLE_COUNT = 70
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0000, b = 0x0001
+in DE_stage
+PS.DE_IR = 0x103f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 71
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0xffffffff
+in DE_stage
+PS.DE_IR = 0x103f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 72
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0xffffffff
+in DE_stage
+PS.DE_IR = 0x103f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+Loading value 0x0001 into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 73
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0xffffffff
+in DE_stage
+PS.DE_IR = 0x103f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3038
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x102f
+loading new pc
+
+CYCLE_COUNT = 74
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0001, b = 0xffffffff
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 75
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 76
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0001 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+Loading value 0x0000 into REGS[0]
+loaded new condition codes, N = 0, Z = 1, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 77
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0001, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x303a
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x102f
+loading new pc
+
+CYCLE_COUNT = 78
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0000, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 79
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 80
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x0000 from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+Loading value 0x000f into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 81
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x102f
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 7
+Loading AGEX
+loaded value 0x000f from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x3040 from REGS[7] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x303c
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1270
+loading new pc
+
+CYCLE_COUNT = 82
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x000f, b = 0x000f
+in DE_stage
+PS.DE_IR = 0x1270
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x000f from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x303e
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x1270
+loading new pc
+
+CYCLE_COUNT = 83
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0x0000, b = 0xfffffff0
+in DE_stage
+PS.DE_IR = 0x1270
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x000f from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+
+CYCLE_COUNT = 84
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0xfffffff0
+in DE_stage
+PS.DE_IR = 0x1270
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x000f from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x001e into REGS[0]
+loaded new condition codes, N = 0, Z = 0, P = 1
+in FETCH_stage
+
+CYCLE_COUNT = 85
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0xfffffff0
+in DE_stage
+PS.DE_IR = 0x1270
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0x0000 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0xfff0 into REGS[1]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+
+CYCLE_COUNT = 86
+in MEM_stage
+in AGEX_stage, Valid = 0
+in eval_alu
+a = 0x0000, b = 0xfffffff0
+in DE_stage
+PS.DE_IR = 0x1270
+PS.DE_IR(15:11) = 2
+CONTROL_STORE_ADDRESS = 5
+de_br_stall = 0
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 1, sr2id = 0
+Loading AGEX
+loaded value 0xfff0 from REGS[1] into NEW_PS.AGEX_SR1
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3040
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0xf025
+loading new pc
+
+CYCLE_COUNT = 87
+in MEM_stage
+in AGEX_stage, Valid = 1
+in eval_alu
+a = 0xfff0, b = 0xfffffff0
+in DE_stage
+PS.DE_IR = 0xf025
+PS.DE_IR(15:11) = 30
+CONTROL_STORE_ADDRESS = 61
+de_br_stall = 1
+v_de_br_stall = 1
+sr2id = PS.DE_IR(11:9)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3042
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0000
+
+CYCLE_COUNT = 88
+in MEM_stage
+in AGEX_stage, Valid = 1
+-------------in eval_shf----------------
+PS.AGEX_IR = 0xf025
+bit5 = 1, bit4 = 0, imm4 = 0x0005
+PS.AGEX_SR1 = 0x001e
+performing left shift
+result = 0x03c0
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR2
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3042
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0000
+
+CYCLE_COUNT = 89
+in MEM_stage
+!!!!!!!!!!trap is going to be taken!!!!!!!!!!
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x001e
+performing left shift
+result = 0x001e
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0xffe0 into REGS[1]
+loaded new condition codes, N = 1, Z = 0, P = 0
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x3042
+NEW_PS.DE_V = 0
+NEW_PS.DE_IR = 0x0000
+v_mem_br_stall = 1, mem_pcmux = 2
+loading new pc
+
+CYCLE_COUNT = 90
+in MEM_stage
+in AGEX_stage, Valid = 0
+----------in eval_agexaddr----------
+addr2mux_out = 0
+output = 3042
+-------------in eval_shf----------------
+PS.AGEX_IR = 0x0000
+bit5 = 0, bit4 = 0, imm4 = 0x0000
+PS.AGEX_SR1 = 0x001e
+performing left shift
+result = 0x001e
+in DE_stage
+PS.DE_IR = 0x0000
+PS.DE_IR(15:11) = 0
+CONTROL_STORE_ADDRESS = 0
+de_br_stall = 1
+v_de_br_stall = 0
+sr2id = PS.DE_IR(2:0)
+sr1id = 0, sr2id = 0
+Loading AGEX
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR1
+loaded value 0x001e from REGS[0] into NEW_PS.AGEX_SR2
+Loading value 0x3040 into REGS[7]
+in FETCH_stage
+loading de
+NEW_PS.DE_NPC = 0x0002
+NEW_PS.DE_V = 1
+NEW_PS.DE_IR = 0x0000
+loading new pc
+
 Simulator halted
 
 LC-3b-SIM> 

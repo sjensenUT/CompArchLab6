@@ -959,6 +959,7 @@ int dependency_logic(int v, int sr1_needed, int sr2_needed, int sr1, int sr2, in
 
 
 int eval_agexaddr(){
+	printf("----------in eval_agexaddr----------\n");
 	int addr1mux_out;
 	int addr2mux_out;
 	if(Get_ADDR1MUX(PS.AGEX_CS)){
@@ -966,7 +967,7 @@ int eval_agexaddr(){
 	}else{
 		addr1mux_out = PS.AGEX_NPC;
 	}
-	
+	addr1mux_out = addr1mux_out & 0x0000FFFF;	
 	int addr2mux = Get_ADDR2MUX(PS.AGEX_CS);
        	if(addr2mux == 0){
 		addr2mux_out = 0;
@@ -977,12 +978,14 @@ int eval_agexaddr(){
 	}else{
 		addr2mux_out = sext(bits(PS.AGEX_IR, 10, 0), 11);
 	}
-
 	if(Get_LSHF1(PS.AGEX_CS)){
 		addr2mux_out = addr2mux_out << 1;
 	}
-	
-	return addr1mux_out + addr2mux_out;
+	addr2mux_out = addr2mux_out & 0x0000FFFF;
+	printf("addr2mux_out = %x\n", addr2mux_out);
+	int output = (addr1mux_out + addr2mux_out) & 0x0000FFFF;
+	printf("output = %x\n", output);
+	return output;
 
 }
 
@@ -1151,9 +1154,9 @@ void MEM_stage() {
 
 	int write_word;
 	if(!data_size && mem_addr0){
-		write_word = PS.MEM_ALU_RESULT << 8;
+		write_word = (PS.MEM_ALU_RESULT << 8) & 0x0000FFFF;
 	}else{
-		write_word = PS.MEM_ALU_RESULT;
+		write_word = (PS.MEM_ALU_RESULT) & 0x0000FFFF;
 	}
 
 	int v_dcache_en = Get_DCACHE_EN(PS.MEM_CS) && PS.MEM_V; 
@@ -1168,12 +1171,12 @@ void MEM_stage() {
 			}
 		}
 	}
-    dcache_out = dcache_out & 0x0000FFFF;
+	dcache_out = dcache_out & 0x0000FFFF;
 	mem_stall = v_dcache_en && !r;
 	NEW_PS.SR_DATA = dcache_out;
-	NEW_PS.SR_NPC = PS.MEM_NPC;
-	NEW_PS.SR_ALU_RESULT = PS.MEM_ALU_RESULT;
-	NEW_PS.SR_IR = PS.MEM_IR;
+	NEW_PS.SR_NPC = PS.MEM_NPC & 0x0000FFFF;
+	NEW_PS.SR_ALU_RESULT = PS.MEM_ALU_RESULT & 0x0000FFFF;
+	NEW_PS.SR_IR = PS.MEM_IR & 0x0000FFFF;
 	NEW_PS.SR_DRID = PS.MEM_DRID;
 	NEW_PS.SR_V = PS.MEM_V && !(mem_stall);
 
@@ -1185,7 +1188,7 @@ void MEM_stage() {
   	}
 
 	trap_pc = dcache_out;
-	target_pc = PS.MEM_ADDRESS;
+	target_pc = PS.MEM_ADDRESS & 0x0000FFFF;
 	mem_pcmux = eval_br_logic(PS.MEM_V, PS.MEM_CC, bits(PS.MEM_IR, 11, 9), 
 			Get_BR_OP(PS.MEM_CS), Get_UNCOND_OP(PS.MEM_CS), Get_TRAP_OP(PS.MEM_CS));
 	v_mem_ld_cc = PS.MEM_V && Get_MEM_LD_CC(PS.MEM_CS);
@@ -1200,11 +1203,11 @@ void AGEX_stage() {
 	int ii, jj = 0;
 	int LD_MEM = !mem_stall;
 	if (LD_MEM) {
-		NEW_PS.MEM_ADDRESS = eval_addressmux();
-		NEW_PS.MEM_NPC = PS.AGEX_NPC;
+		NEW_PS.MEM_ADDRESS = eval_addressmux() & 0x0000FFFF;
+		NEW_PS.MEM_NPC = PS.AGEX_NPC & 0x0000FFFF;
 		NEW_PS.MEM_CC = PS.AGEX_CC;
-		NEW_PS.MEM_ALU_RESULT = eval_alu_result_mux();
-		NEW_PS.MEM_IR = PS.AGEX_IR;
+		NEW_PS.MEM_ALU_RESULT = eval_alu_result_mux() & 0x0000FFFF;
+		NEW_PS.MEM_IR = PS.AGEX_IR & 0x0000FFFF;
 		NEW_PS.MEM_DRID = PS.AGEX_DRID;
 		NEW_PS.MEM_V = PS.AGEX_V;
 
@@ -1263,11 +1266,11 @@ void DE_stage() {
 	
 	if (LD_AGEX) {
 		printf("Loading AGEX\n");
-  		NEW_PS.AGEX_NPC = PS.DE_NPC;
-		NEW_PS.AGEX_IR = PS.DE_IR;
-		NEW_PS.AGEX_SR1 = REGS[sr1];
+  		NEW_PS.AGEX_NPC = (PS.DE_NPC) & 0x0000FFFF;
+		NEW_PS.AGEX_IR = PS.DE_IR & 0x0000FFFF;
+		NEW_PS.AGEX_SR1 = REGS[sr1] & 0x0000FFFF;
 		printf("loaded value 0x%04x from REGS[%d] into NEW_PS.AGEX_SR1\n", REGS[sr1], sr1);
-		NEW_PS.AGEX_SR2 = REGS[sr2];
+		NEW_PS.AGEX_SR2 = REGS[sr2] & 0x0000FFFF;
 		printf("loaded value 0x%04x from REGS[%d] into NEW_PS.AGEX_SR2\n", REGS[sr2], sr2);
 		NEW_PS.AGEX_CC = (N << 2) + (Z << 1) + P;
 		if(Get_DRMUX(csinst)){
@@ -1309,11 +1312,12 @@ void FETCH_stage() {
 	int ld_de = !(dep_stall || mem_stall);
 	if(ld_de){
 		printf("loading de\n");
-		NEW_PS.DE_NPC = PC + 2;
+		NEW_PS.DE_NPC = (PC + 2) & 0x0000FFFF;
 		printf("NEW_PS.DE_NPC = 0x%04x\n", NEW_PS.DE_NPC);
 		NEW_PS.DE_V = (icache_r && !(v_de_br_stall) && (!v_agex_br_stall) && (!v_mem_br_stall));
 		printf("NEW_PS.DE_V = %d\n", NEW_PS.DE_V);
-		NEW_PS.DE_IR = ir;
+		NEW_PS.DE_IR = ir & 0x0000FFFF;
+		printf("ir = 0x%04x\n", ir);
 		printf("NEW_PS.DE_IR = 0x%04x\n", NEW_PS.DE_IR);
 	}
 	if(v_mem_br_stall){
@@ -1322,11 +1326,11 @@ void FETCH_stage() {
 	if((icache_r && !(v_de_br_stall || v_agex_br_stall || dep_stall || mem_stall || v_mem_br_stall)) || (v_mem_br_stall && (mem_pcmux > 0))){
 		printf("loading new pc\n");
 		if(mem_pcmux == 0){
-			PC = PC + 2;
+			PC = (PC + 2) & 0x0000FFFF;
 		}else if(mem_pcmux == 1){
-			PC = target_pc;
+			PC = target_pc & 0x0000FFFF;
 		}else{
-			PC = trap_pc;
+			PC = trap_pc & 0x0000FFFF;
 		}
 	}
 	printf("\n");
