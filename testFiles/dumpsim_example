@@ -126,7 +126,7 @@ Current register/bus values :
 Current architectural state :
 -------------------------------------
 Cycle Count     : 10
-PC              : 0x3008
+PC              : 0xfeed
 CCs: N = 1  Z = 0  P = 0
 Registers:
 0: 0x0000
@@ -208,7 +208,7 @@ MEM_STALL       :  0
 V_MEM_BR_STALL  :  1
 
 ------------- DE   Latches --------------
-DE_NPC          :  0x300a
+DE_NPC          :  0xfeef
 DE_IR           :  0x0000
 DE_V            :  0
 

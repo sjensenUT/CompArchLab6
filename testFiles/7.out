@@ -56,6 +56,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3002
 NEW_PS.DE_V = 0
+ir = 0xfeed
 NEW_PS.DE_IR = 0xfeed
 
 CYCLE_COUNT = 1
@@ -85,6 +86,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3002
 NEW_PS.DE_V = 1
+ir = 0x102f
 NEW_PS.DE_IR = 0x102f
 loading new pc
 
@@ -112,6 +114,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3004
 NEW_PS.DE_V = 1
+ir = 0xe20c
 NEW_PS.DE_IR = 0xe20c
 loading new pc
 
@@ -135,6 +138,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3006
 NEW_PS.DE_V = 1
+ir = 0x6240
 NEW_PS.DE_IR = 0x6240
 loading new pc
 
@@ -243,6 +247,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3008
 NEW_PS.DE_V = 1
+ir = 0x7040
 NEW_PS.DE_IR = 0x7040
 loading new pc
 
@@ -273,6 +278,7 @@ in FETCH_stage
 
 CYCLE_COUNT = 9
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 in DE_stage
 PS.DE_IR = 0x7040
@@ -286,6 +292,7 @@ in FETCH_stage
 
 CYCLE_COUNT = 10
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 ----------in eval_agexaddr----------
 addr2mux_out = 0
@@ -351,6 +358,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300a
 NEW_PS.DE_V = 1
+ir = 0x7041
 NEW_PS.DE_IR = 0x7041
 loading new pc
 
@@ -377,10 +385,12 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300c
 NEW_PS.DE_V = 0
+ir = 0xfeed
 NEW_PS.DE_IR = 0xfeed
 
 CYCLE_COUNT = 14
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 ----------in eval_agexaddr----------
 addr2mux_out = 2
@@ -402,11 +412,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300c
 NEW_PS.DE_V = 1
+ir = 0xf025
 NEW_PS.DE_IR = 0xf025
 loading new pc
 
 CYCLE_COUNT = 15
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 -------------in eval_shf----------------
 PS.AGEX_IR = 0xfeed
@@ -429,6 +441,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300e
 NEW_PS.DE_V = 0
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 
 CYCLE_COUNT = 16
@@ -455,10 +468,12 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300e
 NEW_PS.DE_V = 0
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 
 CYCLE_COUNT = 17
 in MEM_stage
+making cache access
 !!!!!!!!!!trap is going to be taken!!!!!!!!!!
 in AGEX_stage, Valid = 0
 ----------in eval_agexaddr----------
@@ -485,6 +500,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300e
 NEW_PS.DE_V = 0
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 v_mem_br_stall = 1, mem_pcmux = 2
 loading new pc
@@ -517,6 +533,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x0002
 NEW_PS.DE_V = 1
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 loading new pc
 

@@ -1162,6 +1162,7 @@ void MEM_stage() {
 	int v_dcache_en = Get_DCACHE_EN(PS.MEM_CS) && PS.MEM_V; 
 	int r = 0, dcache_out = 0;
 	if(v_dcache_en){
+		printf("making cache access\n");
 		dcache_access(PS.MEM_ADDRESS, &dcache_out, write_word, &r, we0, we1);	
 		if(!data_size){
 			if(mem_addr0){
@@ -1323,7 +1324,7 @@ void FETCH_stage() {
 	if(v_mem_br_stall){
 		printf("v_mem_br_stall = %d, mem_pcmux = %d\n", v_mem_br_stall, mem_pcmux);
 	}
-	if((icache_r && !(v_de_br_stall || v_agex_br_stall || dep_stall || mem_stall || v_mem_br_stall)) || (v_mem_br_stall && (mem_pcmux > 0))){
+	if((icache_r && !(v_de_br_stall || v_agex_br_stall || dep_stall || mem_stall || v_mem_br_stall)) || (v_mem_br_stall && !mem_stall && (mem_pcmux > 0))){
 		printf("loading new pc\n");
 		if(mem_pcmux == 0){
 			PC = (PC + 2) & 0x0000FFFF;

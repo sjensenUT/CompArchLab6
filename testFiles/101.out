@@ -118,6 +118,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3002
 NEW_PS.DE_V = 0
+ir = 0xfeed
 NEW_PS.DE_IR = 0xfeed
 
 CYCLE_COUNT = 1
@@ -147,6 +148,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3002
 NEW_PS.DE_V = 1
+ir = 0xee20
 NEW_PS.DE_IR = 0xee20
 loading new pc
 
@@ -174,6 +176,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3004
 NEW_PS.DE_V = 1
+ir = 0x61c0
 NEW_PS.DE_IR = 0x61c0
 loading new pc
 
@@ -280,6 +283,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3006
 NEW_PS.DE_V = 1
+ir = 0xee1e
 NEW_PS.DE_IR = 0xee1e
 loading new pc
 
@@ -310,11 +314,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3008
 NEW_PS.DE_V = 1
+ir = 0x63c0
 NEW_PS.DE_IR = 0x63c0
 loading new pc
 
 CYCLE_COUNT = 8
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 ----------in eval_agexaddr----------
 addr2mux_out = 3c
@@ -419,6 +425,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300a
 NEW_PS.DE_V = 1
+ir = 0x1401
 NEW_PS.DE_IR = 0x1401
 loading new pc
 
@@ -449,6 +456,7 @@ in FETCH_stage
 
 CYCLE_COUNT = 13
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 in eval_alu
 a = 0x0001, b = 0x0000
@@ -505,6 +513,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300c
 NEW_PS.DE_V = 1
+ir = 0x16c3
 NEW_PS.DE_IR = 0x16c3
 loading new pc
 
@@ -528,6 +537,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x300e
 NEW_PS.DE_V = 1
+ir = 0xee1b
 NEW_PS.DE_IR = 0xee1b
 loading new pc
 
@@ -551,6 +561,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3010
 NEW_PS.DE_V = 1
+ir = 0x61c0
 NEW_PS.DE_IR = 0x61c0
 loading new pc
 
@@ -662,6 +673,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3012
 NEW_PS.DE_V = 1
+ir = 0xee19
 NEW_PS.DE_IR = 0xee19
 loading new pc
 
@@ -692,11 +704,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3014
 NEW_PS.DE_V = 1
+ir = 0x63c0
 NEW_PS.DE_IR = 0x63c0
 loading new pc
 
 CYCLE_COUNT = 23
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 ----------in eval_agexaddr----------
 addr2mux_out = 32
@@ -801,6 +815,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3016
 NEW_PS.DE_V = 0
+ir = 0xfeed
 NEW_PS.DE_IR = 0xfeed
 
 CYCLE_COUNT = 27
@@ -830,11 +845,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3016
 NEW_PS.DE_V = 1
+ir = 0x1840
 NEW_PS.DE_IR = 0x1840
 loading new pc
 
 CYCLE_COUNT = 28
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 -------------in eval_shf----------------
 PS.AGEX_IR = 0xfeed
@@ -895,6 +912,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3018
 NEW_PS.DE_V = 1
+ir = 0xee1a
 NEW_PS.DE_IR = 0xee1a
 loading new pc
 
@@ -918,6 +936,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x301a
 NEW_PS.DE_V = 1
+ir = 0x61c0
 NEW_PS.DE_IR = 0x61c0
 loading new pc
 
@@ -1027,6 +1046,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x301c
 NEW_PS.DE_V = 1
+ir = 0xee17
 NEW_PS.DE_IR = 0xee17
 loading new pc
 
@@ -1057,11 +1077,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x301e
 NEW_PS.DE_V = 1
+ir = 0x63c0
 NEW_PS.DE_IR = 0x63c0
 loading new pc
 
 CYCLE_COUNT = 37
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 ----------in eval_agexaddr----------
 addr2mux_out = 2e
@@ -1166,6 +1188,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3020
 NEW_PS.DE_V = 1
+ir = 0x1a01
 NEW_PS.DE_IR = 0x1a01
 loading new pc
 
@@ -1196,6 +1219,7 @@ in FETCH_stage
 
 CYCLE_COUNT = 42
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 in eval_alu
 a = 0x8000, b = 0xffff
@@ -1252,6 +1276,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3022
 NEW_PS.DE_V = 1
+ir = 0xee10
 NEW_PS.DE_IR = 0xee10
 loading new pc
 
@@ -1275,6 +1300,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3024
 NEW_PS.DE_V = 1
+ir = 0x61c0
 NEW_PS.DE_IR = 0x61c0
 loading new pc
 
@@ -1384,6 +1410,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3026
 NEW_PS.DE_V = 1
+ir = 0xee12
 NEW_PS.DE_IR = 0xee12
 loading new pc
 
@@ -1414,11 +1441,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3028
 NEW_PS.DE_V = 1
+ir = 0x63c0
 NEW_PS.DE_IR = 0x63c0
 loading new pc
 
 CYCLE_COUNT = 51
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 ----------in eval_agexaddr----------
 addr2mux_out = 24
@@ -1523,6 +1552,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x302a
 NEW_PS.DE_V = 1
+ir = 0x1c01
 NEW_PS.DE_IR = 0x1c01
 loading new pc
 
@@ -1553,6 +1583,7 @@ in FETCH_stage
 
 CYCLE_COUNT = 56
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 0
 in eval_alu
 a = 0x0001, b = 0x7fff
@@ -1609,6 +1640,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x302c
 NEW_PS.DE_V = 1
+ir = 0xee0a
 NEW_PS.DE_IR = 0xee0a
 loading new pc
 
@@ -1632,6 +1664,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x302e
 NEW_PS.DE_V = 1
+ir = 0x61c0
 NEW_PS.DE_IR = 0x61c0
 loading new pc
 
@@ -1740,6 +1773,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3030
 NEW_PS.DE_V = 1
+ir = 0x63c0
 NEW_PS.DE_IR = 0x63c0
 loading new pc
 
@@ -1770,11 +1804,13 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3032
 NEW_PS.DE_V = 1
+ir = 0x10be
 NEW_PS.DE_IR = 0x10be
 loading new pc
 
 CYCLE_COUNT = 65
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 ----------in eval_agexaddr----------
 addr2mux_out = 0
@@ -1800,10 +1836,12 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3034
 NEW_PS.DE_V = 0
+ir = 0xfeed
 NEW_PS.DE_IR = 0xfeed
 
 CYCLE_COUNT = 66
 in MEM_stage
+making cache access
 in AGEX_stage, Valid = 1
 in eval_alu
 a = 0x0002, b = 0xfffffffe
@@ -1824,6 +1862,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3034
 NEW_PS.DE_V = 1
+ir = 0x1021
 NEW_PS.DE_IR = 0x1021
 loading new pc
 
@@ -1891,6 +1930,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3036
 NEW_PS.DE_V = 1
+ir = 0x103f
 NEW_PS.DE_IR = 0x103f
 loading new pc
 
@@ -1970,6 +2010,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3038
 NEW_PS.DE_V = 1
+ir = 0x102f
 NEW_PS.DE_IR = 0x102f
 loading new pc
 
@@ -2049,6 +2090,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x303a
 NEW_PS.DE_V = 1
+ir = 0x102f
 NEW_PS.DE_IR = 0x102f
 loading new pc
 
@@ -2128,6 +2170,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x303c
 NEW_PS.DE_V = 1
+ir = 0x1270
 NEW_PS.DE_IR = 0x1270
 loading new pc
 
@@ -2151,6 +2194,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x303e
 NEW_PS.DE_V = 1
+ir = 0x1270
 NEW_PS.DE_IR = 0x1270
 loading new pc
 
@@ -2232,6 +2276,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3040
 NEW_PS.DE_V = 1
+ir = 0xf025
 NEW_PS.DE_IR = 0xf025
 loading new pc
 
@@ -2255,6 +2300,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3042
 NEW_PS.DE_V = 0
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 
 CYCLE_COUNT = 88
@@ -2281,10 +2327,12 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3042
 NEW_PS.DE_V = 0
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 
 CYCLE_COUNT = 89
 in MEM_stage
+making cache access
 !!!!!!!!!!trap is going to be taken!!!!!!!!!!
 in AGEX_stage, Valid = 0
 ----------in eval_agexaddr----------
@@ -2313,6 +2361,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x3042
 NEW_PS.DE_V = 0
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 v_mem_br_stall = 1, mem_pcmux = 2
 loading new pc
@@ -2345,6 +2394,7 @@ in FETCH_stage
 loading de
 NEW_PS.DE_NPC = 0x0002
 NEW_PS.DE_V = 1
+ir = 0x0000
 NEW_PS.DE_IR = 0x0000
 loading new pc
 
